@@ -46,15 +46,15 @@ body{
     font-weight: 200;
 }
 
-/* Section 1*/
+/* Section Hero*/
+
 section{
     height: 100vh;
     width: 100%;
-    position: absolute;
 }
 
 .hero{
- /*   background-color: blueviolet;*/
+   /*background-color: blueviolet;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,7 +78,7 @@ section{
 }
 
 .bigtext{
-    font-size: 50px;
+    font-size: 60px;
 }
 
 .smalltext{
@@ -112,7 +112,7 @@ section{
 
 
 .sec1rightcontent{
-    background-color: brown;
+    /*background-color: brown; */
     margin:20px;
     width: 45%;
 }
@@ -125,3 +125,49 @@ section{
     top: 25px;
     height: 300px;
 }
+
+/* Section Hero DONE*/
+
+/* Section Car*/
+.car{
+    position: relative;
+    background-color: aquamarine;
+}
+
+.car_main_div{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.car_title{
+    position: absolute;
+    width: 100%;
+    padding-top: 5%;
+    text-align: center;
+    background-color: blue;
+    z-index: 998;
+}
+
+.car_bg{
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 20px;
+    height: 30%;
+    width: 100%;
+    background-color:rgb(197, 196, 196);
+
+}
+
+.car_content{
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    background-color: blueviolet;
+}
+/* Section Car DONE*/
