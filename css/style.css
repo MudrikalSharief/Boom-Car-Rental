@@ -207,7 +207,8 @@ button{
 }
 .car_button button{
     border-radius: 40px;
-    background-color: rgb(197, 196, 196) ;
+    background-color: rgb(0, 0, 0) ;
+    color: white;
     border: none;
     font-size: small;
 }
@@ -263,4 +264,72 @@ button{
     height: 100%;
     width: 100%;
 }
-/*about us done *?
+/*about us done */
+
+/*contact section*/
+input{
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+
+.contact_content{
+  /*  background-color: aqua;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contact_content h1{
+    margin-bottom: 20px;
+}
+
+.contact_div{
+    display: flex;
+    justify-content: start;
+    height: 50%;
+    width: 50%;
+    /*background-color: blueviolet;*/
+}
+
+.contact_img{
+    /*background-color: chocolate;*/
+    width: 50%;
+    border-right: 1px solid black;
+
+}
+
+.contact_img img{
+    height: 100%;
+}
+
+.contact_up{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-color: cadetblue; */
+    margin-left: 80px;
+}
+
+.contact_msg{
+    padding-bottom: 70px;
+}
+
+.contact_submit{
+    border-radius: 20px;
+    background-color:black;
+    color: white;
+    border: none;
+    margin: 5px;
+    padding: 15px 50px;
+}
+
+.contact_LN, .contact_FN,.contact_email,.contact_msg{
+    margin:5px;
+    width: 300px;
+}
+/*contact us done*/
