@@ -126,13 +126,15 @@
                     <img src="pics/envelop.jpg" alt="envelope">
                 </div>
 
-                <div class = "contact_up">
-                    <input type="text" value = "Lastname" class="contact_LN">
-                    <input type="text" value = "Firstname" class="contact_FN">
-                    <input type="email" value = "Email" class="contact_email">
-                    <input type="text" value="Your Question" class = "contact_msg">
-                    <input type="submit" value = "Send Message" class = "contact_submit">
-                </div>
+                <form action="#">
+                    <div class = "contact_up">
+                        <input type="text" placeholder = "Lastname" class="contact_LN" required>
+                        <input type="text" placeholder = "Firstname" class="contact_FN" required>
+                        <input type="email" placeholder = "Email" class="contact_email" required>
+                        <input type="text" placeholder="Your Question" class = "contact_msg" required>
+                        <input type="submit" placeholder = "Send Message" class = "contact_submit">
+                    </div>
+                </form>    
             </div>
         </div>
 

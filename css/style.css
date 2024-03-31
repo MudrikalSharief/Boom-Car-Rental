@@ -326,6 +326,7 @@ input{
     border: none;
     margin: 5px;
     padding: 15px 50px;
+    cursor:pointer;
 }
 
 .contact_LN, .contact_FN,.contact_email,.contact_msg{
