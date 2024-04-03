@@ -1,336 +1,237 @@
-*{  
-    padding: 0;
+*{
     margin: 0;
-    text-decoration: none;
+    padding: 0;
     box-sizing: border-box;
-    font-family:sans-serif ;
+    list-style: none;
+    text-decoration: none;
 }
 
+section{
+  height: 100vh;
+  width: 100%;
+}
 
 body{
-    height: 100vh;
-    width: 100%;
+  background-color: #000;
 }
 
-.navbar{
-    position: fixed;
-    width: 100%;
-    background-color: rgb(197, 196, 196);
-    padding: 20px 50px;
-    z-index: 999;
-    text-align: center;
-    
+/*  Navigation start */
+.headnav{
+  position: fixed;
+  z-index: 1;
+  width: 100%;
 }
-
-
 .navdiv{
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
+    background-color: #292828;
 }
 
-.navdiv a{
-    color: black;
+.logo{
+    font-size: 1.5em;
+    margin: .5rem;
 }
-
 
 .logo a{
-    font-size:30px;
-    font-weight: 600;
-    
+    color: #e4e4e4;
+    font-size: 1.5rem;
 }
 
-.navdiv ul li{
-    list-style: none;
-    display: inline-block;
-    padding-left: 80px;
-    font-weight: 200;
-}
-
-/* Section Hero*/
-
-section{
-    height: 100vh;
-    width: 100%;
-}
-
-.hero{
-   /*background-color: blueviolet;*/
+.navul ul{
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.hero_main_div{
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    /*background-color: black;*/
-   
+.navul a {
+    color: #e4e4e4;
+    display: block;
+    padding: 1rem;
 }
 
-.sec1leftcontent{
-    display: flex;
+.navul a:hover{
+  background-color: #414141;
+}
+
+.active-button{
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  
+}
+
+.active-button .lines{
+  height: 3px;
+  width: 100%;
+  background-color:#e4e4e4;
+  border-radius: 10px;
+  
+}
+
+@media only screen and (max-width:600px){ 
+  
+  .navdiv{
     flex-direction: column;
-    justify-content: space-between;
-    margin: 20px;
-  /*  background-color: aquamarine;*/
-    width: 45%;
+    align-items: flex-start;
+  }
+
+  .active-button{
+    display: flex;
+  }
+  
+  .navul{
+    display: none;
+    width: 100%;
+  }
+
+  .navul ul{
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .navul li{
+    text-align: center;
+  }
+
+  .navul li a{
+    padding: .5rem 1rem;
+  }
+  /* This line will be responsible in javascript in activating*/
+  .navul.active{
+    display: flex;
+  }  
+
 }
 
-.bigtext{
-    font-size: 60px;
-}
+/*  Navigation end */
 
-.smalltext{
-    font-size: 25px;
-}
+/* Car Section START*/
 
 button{
-    padding: 15px;
-    width: 190px;
-    border-style: solid;
-    border-width: 1px;
-    font-size: 15px;
-    font-weight: 600;
+  padding: 1vw;
+  width: 48%;
 }
 
-.reserve {
-    background-color: black;
-    color: azure;
-    
-}
-
-.view{
-    background-color: white;
-    color: black;
-}
-
-.sec1buttons{
-    display: flex;
-    justify-content: space-between;
-}
-
-
-.sec1rightcontent{
-    /*background-color: brown; */
-    margin:20px;
-    width: 45%;
-}
-.shape{
-    background-color: rgb(197, 196, 196);
-}
-.shape img{
-    position: relative;
-    right: 55px;
-    top: 25px;
-    height: 300px;
-}
-
-/* Section Hero DONE*/
-
-/* Section Car*/
 .car{
-    position: relative;
-    /*background-color:black;*/
-}
-
-.car_main_div{
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    /*background-color: blueviolet;*/
-
-
-}
-
-.car_title{
-    position: relative;
-    width: 100%;
-    text-align: center;
-    /*background-color: blue;*/
-    padding-top: 3%;
-    font-size: 40px;
-
-}
-
-.car_bg{
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 20px;
-    height: 30%;
-    width: 100%;
-    background-color:rgb(197, 196, 196);
-
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
 }
 
 .car_content{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    height: 150%;
-    width: 25%;
-    border-radius: 20px;
-    border: 2px solid transparent;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color: white;
-    margin: 10px;
+  display: flex;
+  justify-content:center;
+  align-items: stretch;
+  padding: 12%;
 }
 
-.car_img img{
-    position: relative;
-    width: 100%;
-    border-radius: 20px 20px 0 0  ;
-    
+.car_left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  background-color:#f2f2f2;
+  margin-right: 2%;
 }
 
-.car_txt{
-    position: relative;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 40%;
-    padding: 5% 5%;
-    width: 100%;
-    font-size: 16px;
-    font-weight: 600;
-    /*background-color: cadetblue;*/
+.car_left h1{
+  font-size: 5vw;
 }
-.car_content p{
-    padding: 1%;
-}
-.car_button button{
-    border-radius: 40px;
-    background-color: rgb(0, 0, 0) ;
-    color: white;
-    border: none;
-    font-size: small;
+
+.car_left p{
+  font-size: 3vw;
+  margin: 1ch;
 }
 
 .car_button{
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-/* Section Car DONE*/
-
-/* About us start*/
-
-.about{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /*background-color: aquamarine;*/
-}
-
-.about_content{
-    display: flex;
-    justify-content: space-around;
-    margin:20%;
-    /*background-color: bisque;*/
-}
-
-.about_text{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 10px;
-    
-
-}
-
-.about_text h1{
-    font-size: 60px;
-    font-weight: 400;
-    margin: 10px;
-}
-
-.about_text p{
-    font-size: 25px;
-    margin: 10px;
-}
-
-.about_img{
-    margin: 10px;    
-}
-
-.about_img img{
-    height: 100%;
-    width: 100%;
-}
-/*about us done */
-
-/*contact section*/
-input{
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid black;
+  
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 
-.contact_content{
-  /*  background-color: aqua;*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.rent{
+  background-color: #0c0c0c;
+  color: #f2f2f2;
+  border: 1px solid #0c0c0c;
 }
 
-.contact_content h1{
-    margin-bottom: 20px;
+.view{
+  background-color: #f2f2f2;
+  color: #0c0c0c;
+  border: 1px solid #0c0c0c;
 }
 
-.contact_div{
-    display: flex;
-    justify-content: start;
-    height: 50%;
-    width: 50%;
-    /*background-color: blueviolet;*/
+.car_right{
+  width: 100%;
+  background-color: #e4e4e4;
+  margin-left: 2%;
 }
 
-.contact_img{
-    /*background-color: chocolate;*/
-    width: 50%;
-    border-right: 1px solid black;
-
+.car_right img{
+  width: 100%;
+  position: relative;
+  left: -9%;
+  bottom: -15%;
 }
 
-.contact_img img{
-    height: 100%;
+
+@media only screen and (max-width:600px) {
+  section{
+    height:fit-content;
+    padding-bottom: 10px;
+  }
+
+  button{
+    padding: 2vw;
+    width: 35vw;
+  }
+
+  .car{
+    align-items: flex-start;
+    padding-top: 30px;
+  }
+
+  .car_button {
+    justify-content:space-evenly;
+  }
+  
+  .car_left h1{
+    font-size: 7vw;
+    text-align: center;
+    margin-top: .5ch;
+  }
+
+  .car_left p{
+    font-size: 4vw;
+    text-align: center;
+  }
+
+  .car_right{
+    margin: 0;
+
+  }
+  .car_right img{
+    position: static;
+  }
+  .car_content{
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  
 }
 
-.contact_up{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /*background-color: cadetblue; */
-    margin-left: 80px;
+/*==========================================*/
+@media only screen and (max-width:800px){
+  
+  
 }
 
-.contact_msg{
-    padding-bottom: 70px;
-}
-
-.contact_submit{
-    border-radius: 20px;
-    background-color:black;
-    color: white;
-    border: none;
-    margin: 5px;
-    padding: 15px 50px;
-    cursor:pointer;
-}
-
-.contact_LN, .contact_FN,.contact_email,.contact_msg{
-    margin:5px;
-    width: 300px;
-}
-/*contact us done*/
+/* Car Section END*/

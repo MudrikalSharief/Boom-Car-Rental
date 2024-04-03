@@ -3,141 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BooM Car rental</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="javascipt/script.js" ></script>
+    <title>Document</title>
 </head>
 <body>
-<!-- For nav --------------------------------------------------->    
+
     <header>
-        <nav class = "navbar">
+        <nav class = "headnav">
             <div class = "navdiv">
-                 <div class = "logo"><a href="#">BooM </a></div>
-                <ul>
-                     <li><a href="#">Home</a></li>
-                     <li><a href="#">Cars</a></li>
-                     <li><a href="#">About us</a></li>
-                     <li><a href="#">Contact us</a></li>
-                </ul>
+                <div class = "logo"><a href="#">BooM</a></div>        
+                 
+                <a href="#" class = "active-button">
+                    <span class = "lines"></span>
+                    <span class = "lines"></span>
+                    <span class = "lines"></span>
+                </a> 
+
+                <div  class = "navul">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Cars</a></li>                            <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>            
             </div>
         </nav>
     </header>
-<!-- navdone -->     
 
-<!-- Hero section--------------------------------------------------------->
-    <section class = "hero">
-        <div class = "hero_main_div">
-          
-            <div class = "sec1leftcontent">
-                <p class = "bigtext">BooM Car <br>Rental</p>
-                <p class = "smalltext">Zamboanga's first and only <br>car rental in the city.</p>
-                <div class = "sec1buttons">
-                    <button  class = "reserve">Reserve Car</button>
-                    <button  class = "view">View Car</button>
-                </div>     
-            </div>
-
-            <div class = "sec1rightcontent">
-                <div class = shape>
-                    <img src="pics/heroo.png" alt="car photo">
-                </div>
-            </div>
-
-        </div>
-    </section>
-<!-- Hero section done-->
-
-<!-- Car Section --------------------------------------------------->
     <Section class = "car">
-        
-        <div class = "car_main_div">
-            
-            <p class = "car_title ">Our Cars</p>
+        <div class = "car_content">
+            <div class = "car_left">
+                <h1>BooM Car Rental</h1>
 
-            <div class = "car_bg">
-                <div class = "car_content">
-                    <div class = "car_img"> <img src="pics/mitsubishi mirage g4.png" alt="car"></div>
-                    <div class ="car_txt">
-                        <p >Mitsubishi Mirage G4</p>
-                        <p >Passenger : 5</p>
-                        <p >Bag : 5</p>
-                    </div>
-                    
-                </div>
-                <div class = "car_content">
-                    <div class = "car_img"> <img src="pics/mitsubishi mirage g4.png" alt="car"></div>
-                    <div class ="car_txt">
-                        <p >Mitsubishi Mirage G4</p>
-                        <p >Passenger : 5</p>
-                        <p >Bag : 5</p>
-                    </div>
-                </div>
-                <div class = "car_content">
-                    <div class = "car_img"> <img src="pics/mitsubishi mirage g4.png" alt="car"></div>
-                    <div class ="car_txt">
-                        <p>Mitsubishi Mirage G4</p>
-                        <p >Passenger : 5</p>
-                        <p >Bag : 5</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class = "car_button">
-                <button >See More</button>
-            </div>   
-        </div>
-        
-    </Section>
-<!-- Car section done-->
-
-<!-- About us Section----------------------------------------------->
-    <Section class = "about">
-        <div class="about_content">
-            <div class = "about_text">
-                <h1>About us</h1>
-                <p>
-                    Boom Car Rental is the first and oly
-                    car rental in Zamboanga City. Offering
-                    a well maintained and excellent customer
-                    accomodation for best customer experience.
+                <p>Zamboanga's first and only Car 
+                    car rental in the City!
                 </p>
-                <p>
-                    Our vehicles is cleaned and maintain effectively
-                    in between customer use.
-                    This will ensure you a worry-free ride from
-                    any health hazard.
-                </p>
-            </div>
 
-            <div class ="about_img">
-                <img src="pics/about us puc.jpg" alt="car">
+                <div class = "car_button">
+                    <button class = "rent">Rent Car</button>
+                    <button class = "view">View Car</button>
+                </div>
             </div>
             
-        </div>
-    </Section>
-<!-- About us Done-->
-    
-<!-- Contact us Section------------------------------------------>
-    <section class = "contact">
-        <div class = "contact_content">
-            <h1>Have some Questions?</h1>
-
-            <div class = "contact_div">
-                <div class = "contact_img">
-                    <img src="pics/envelop.jpg" alt="envelope">
-                </div>
-
-                <form action="#">
-                    <div class = "contact_up">
-                        <input type="text" placeholder = "Lastname" class="contact_LN" required>
-                        <input type="text" placeholder = "Firstname" class="contact_FN" required>
-                        <input type="email" placeholder = "Email" class="contact_email" required>
-                        <input type="text" placeholder="Your Question" class = "contact_msg" required>
-                        <input type="submit" placeholder = "Send Message" class = "contact_submit">
-                    </div>
-                </form>    
+            <div class = "car_right">
+                <img src="pics/heroo.png" alt="car picture">
             </div>
         </div>
 
-    </section>
+    </Section>
+
 </body>
 </html>
