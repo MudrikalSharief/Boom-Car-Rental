@@ -13,7 +13,8 @@ section{
 }
 
 body{
-  background-color: #e61010;
+ /* background-color: #e61010;*/
+  background-color: #CFCFD2;
 }
 
 /*  Navigation start */
@@ -113,8 +114,8 @@ body{
 /* Home Section START*/
 
 button{
-  padding: 1vw;
-  width: 48%;
+  padding: 1ch;
+  width: 40%;
 }
 
 .home{
@@ -142,12 +143,12 @@ button{
 }
 
 .home_left h1{
-  font-size: 5vw;
+  font-size: clamp(30px, 5vw, 75px) ;
   color: #050612;
 }
 
 .home_left p{
-  font-size: 3vw;
+  font-size: clamp(15px, 2vw, 30px);
   margin: 1ch 0 ;
   color: #050612;
 }
@@ -164,12 +165,14 @@ button{
   background-color: #5B1297;
   color: #DCBCF6;
   border: 1px solid #3E056C;
+  font-size: clamp(12px,1vw,30px);
 }
 
 .view{
   background-color: #CFCFD2;
   color: #5B1297;
   border: 1px solid #3E056C;
+  font-size: clamp(12px,1vw,30px);
 }
 
 .home_right{
@@ -187,14 +190,14 @@ button{
 }
 
 @media only screen and (max-width:600px) {
-  section{
-    height:fit-content;
-    padding-bottom: 10vh;
+  button{
+    width: 30%;
+    margin: 0 1%;
   }
 
-  button{
-    padding: 2vw;
-    width: 35vw;
+  .home{
+    height: fit-content ;
+    padding-bottom: 10px;
   }
 
   .home{
@@ -203,26 +206,28 @@ button{
   }
 
   .home_button {
-    justify-content:space-evenly;
+    justify-content:center;
   }
   
   .home_left h1{
-    font-size: 7vw;
+    /*font-size: 7vw;*/
     text-align: center;
     margin-top: .5ch;
   }
 
   .home_left p{
-    font-size: 4vw;
+    /*font-size: 4vw;*/
     text-align: center;
   }
 
   .home_right{
     margin: 0;
-
+    display:flex;
+    justify-content: center;
   }
   .home_right img{
     position: static;
+    width: 50%;
   }
   .home_content{
     flex-direction: column-reverse;
@@ -257,8 +262,8 @@ button{
 }
 
 .car_wrapper h1{
-  font-size: 4vw;
-  color: #292828;
+  font-size: clamp(30px, 4vw, 75px) ;
+  color: #050612;
 }
 
 .car_card_holder{
@@ -285,7 +290,7 @@ button{
 }
 
 .car_text{
-    padding: 1vw;
+    padding: clamp(2px, 2vw, 30px);
 }
 
 .car_text p{
@@ -294,7 +299,8 @@ button{
 }
 
 .car_button{
-    width: 20vw;
+    width: 45vw;
+    padding: 2ch;
     border-radius: 20px;
     background-color: #5B1297;
     border-style: none;
