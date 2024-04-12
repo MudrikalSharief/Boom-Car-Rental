@@ -14,7 +14,7 @@ section{
 
 body{
  /* background-color: #e61010;*/
-  background-color: #CFCFD2;
+  background-color: #fff;
 }
 
 /*  Navigation start */
@@ -197,8 +197,8 @@ button{
 
 @media only screen and (max-width:600px) {
   button{
-    width: 30%;
-    margin: 0 1%;
+    width: 48%;
+    padding: 1ch;
   }
 
   .home{
@@ -212,18 +212,20 @@ button{
   }
 
   .home_button {
-    justify-content:center;
+    justify-content: space-between;
   }
   
   .home_left h1{
     /*font-size: 7vw;*/
-    text-align: center;
     margin-top: .5ch;
   }
 
   .home_left p{
     /*font-size: 4vw;*/
     text-align: center;
+    max-width: 30ch;
+    text-align: start;
+
   }
 
   .home_right{
@@ -232,12 +234,10 @@ button{
     justify-content: center;
   }
   .home_right img{
-    position: static;
-    width: 50%;
+    object-fit: fill;
   }
   .home_content{
-    flex-direction: column-reverse;
-    padding: 0;
+    padding: 5vw;
   }
   
 }
@@ -264,12 +264,12 @@ button{
     align-items: center;
     height: 100vh;
     width: 100%;
-    background-color: #f1f1f1;
+    background-color: #202020;
 }
 
 .car_wrapper h1{
   font-size: clamp(20px, 5vw, 75px) ;
-  color: #202020;
+  color: #e4e4e4;
   font-weight: 600;
 }
 
@@ -314,10 +314,11 @@ button{
     width: 20vw;
     padding: 2ch;
     border-radius: 20px;
-    background-color: #202020;
+    background-color: #e4e4e4;
     border-style: none;
-    color: #e4e4e4;  
+    color: #202020;  
     font-weight: 800;
+    font-size: clamp(10px, 1vw, 30px);
 }
 
 @media only screen and (max-width:600px){
@@ -456,11 +457,13 @@ button{
 }
 
 .cu_phar{
-  padding-bottom: 10ch;
+  height: 20ch;
   border-radius: 10px;
-  border-style: solid;
-  text-align:left;
-  overflow-wrap:break-word;
+  border: 2px solid #757575;
+  width: 60%;
+  margin: 1% 0;
+  padding: 1.5ch;
+  resize: none;
 }
 
 .cu_sub{
