@@ -10,9 +10,9 @@
 <body>
 
     <header>
-        <nav class = "headnav">
+        <nav class = "headnav">     
             <div class = "navdiv">
-                <div class = "logo"><a href="#">BooM</a></div>        
+                <div class = "logo"><a href="index.html">BooM</a></div>        
                  
                 <a href="#" class = "active-button">
                     <span class = "lines"></span>
@@ -22,16 +22,17 @@
 
                 <div  class = "navul">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Cars</a></li>                            <li><a href="#">About us</a></li>
-                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#page1">Home</a></li>
+                        <li><a href="#page2">Cars</a></li>                            
+                        <li><a href="#page3">About us</a></li>
+                        <li><a href="#page4">Contact us</a></li>
                     </ul>
                 </div>            
             </div>
         </nav>
     </header>
 
-    <Section class = "home">
+    <Section class = "home" id = "page1">
         <div class = "home_content">
             <div class = "home_left">
                 <h1>BooM Car Rental</h1>
@@ -41,8 +42,12 @@
                 </p>
 
                 <div class = "home_button">
-                    <button class = "rent">Rent Car</button>
-                    <button class = "view">View Car</button>
+                    <a href="cars.html">
+                        <button class = "rent" >Rent Car</button>
+                    </a>
+                    <a href="#page2">
+                        <button class = "view">View Car</button>
+                    </a>
                 </div>
             </div>
             
@@ -53,7 +58,7 @@
 
     </Section>
 
-    <section class = "car">
+    <section class = "car" id = "page2">
         <div class = "car_wrapper">
             <h1> Our Cars </h1>
             <div class = "car_card_holder">
@@ -84,11 +89,13 @@
                     </div>
                 </div>
             </div>
-            <button class = "car_button">See more</button>
+            <a href="cars.html">
+                <button class = "car_button">See more</button>
+            </a>
         </div>
     </section>
 
-    <section class = "about_us">
+    <section class = "about_us" id = "page3">
         <div class = "about_us_wrapper">
             <div class = "about_us_left">
                 <h2>About us</h2>
@@ -117,7 +124,7 @@
 
     </section>
 
-    <section class = "contact_us">
+    <section class = "contact_us" id = "page4">
         <div class="contact_us_wrapper">
             <h1>Contact us</h1>
             
@@ -137,5 +144,10 @@
 
         </div>
     </section>
+    <footer class="pagefooter">
+        <div>
+            <a href="FAQ"></a>
+        </div>
+    </footer>
 </body>
 </html>
