@@ -375,8 +375,7 @@ button{
 
 .about_us_wrapper{
   display: flex;
-  height: 70%;
-  width: 70vw;
+  height: 100vh;
 }
 
 .about_us_left{
@@ -384,7 +383,7 @@ button{
   flex-direction: column;
   justify-content: space-between;
   width: 50%;
-  padding: 0 clamp(2px, 2vw, 30px);
+  padding: 5ch;
 }
 
 .about_us_left h2{
@@ -415,6 +414,7 @@ button{
   }
   .about_us_left{
     width: 100%;
+    padding: 1ch;
   }
   .about_us_right{
     width: 100%;
@@ -558,3 +558,31 @@ button{
 }
 
 /* Contact us END*/
+
+/* footer START*/
+  .pagefooter{
+    display: flex;
+    flex-direction: column;
+    background-color: #202020;
+    color:#e4e4e4 ;
+  }
+
+  .pagefooter a{
+    color:#757575 ;
+  }
+
+  .pf_upper{
+    display: flex;
+    padding: 5ch;
+    justify-content: space-around;
+  }
+
+  .pf_col{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pf_lower p{
+    text-align: center;
+  }
+/* footer END*/
