@@ -116,7 +116,7 @@ body{
 
 button{
   padding: 1.5ch;
-  width: 95%;
+  width: 50%;
 }
 
 .home{
@@ -171,14 +171,7 @@ button{
   border: 1px solid #202020;
   font-size: clamp(10px,1vw,30px);
   font-weight: 500;
-}
-
-.view{
-  background-color: #f1f1f1;
-  color: #202020;
-  border: 1px solid #202020;
-  font-size: clamp(10px,1vw,30px);
-  font-weight: 500;
+  border-radius: 10px;
 }
 
 .home_right{
@@ -242,15 +235,20 @@ button{
   
 }
 
-/*==========================================*/
-@media only screen and (max-width:800px){
-  
-  
-}
+
 
 /* Home Section END*/
 
 /* Car Section START*/
+
+.upper_title{
+  padding: 3ch;
+  width: 100%;
+  text-align: center;
+  background-color: #777777;
+  margin-bottom: 10px;
+}
+
 .car{
     display: flex;
     justify-content: center;
@@ -264,14 +262,9 @@ button{
     align-items: center;
     height: 100vh;
     width: 100%;
-    background-color: #202020;
+    background-color: #f1f1f1;
 }
 
-.car_wrapper h1{
-  font-size: clamp(20px, 5vw, 75px) ;
-  color: #e4e4e4;
-  font-weight: 600;
-}
 
 .car_card_holder{
     display: flex;
@@ -313,8 +306,8 @@ button{
 .car_button{
     width: 20vw;
     min-width: 200px;
-    padding: 2ch;
-    border-radius: 20px;
+    padding: 1.5ch;
+    border-radius: 10px;
     background-color: #e4e4e4;
     border-style: none;
     color: #202020;  
@@ -370,6 +363,13 @@ button{
 .about_us_wrapper{
   display: flex;
   height: 100vh;
+  flex-direction: column;
+  margin-top:8ch ;
+}
+
+.car_content{
+  display: flex;
+  height: 100%;
 }
 
 .about_us_left{
@@ -392,39 +392,48 @@ button{
 
 .about_us_right{
   width: 50%;
+  height: 100%;
 }
 .about_us_right img{
-  height: 100%;
+  height: 90%;
   width: 100%;
   object-fit:cover;
 }
 @media only screen and (max-width:600px){
   .about_us_wrapper{
+    position: relative;
     flex-direction: column;
-    width: 80%;
-    height: 90%;
+    width: 100%;
+    height: fit-content;
+    margin-top: 0;
+  }
+  
+  .car_content{
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .about_us_left{
-    width: 100%;
-    padding: 1ch;
-  }
-  .about_us_right{
-    width: 100%;
-  }
-  .about_us_left h2{
-    text-align: center;
-    margin-bottom: 2ch;
-  }
   
+.about_us_left{
+  width: 90%;
+  padding: 3ch;
 }
 
+.about_us_right{
+  width: 60%;
+
+}
+
+.about_us_right img{
+  height: 100%;
+}
+}
 /* About us End*/
 
 
 /* Contact us START*/
 .contact_us{
+  position:relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -436,8 +445,9 @@ button{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80vw;
+  width: 100%;
   min-width: 550px;
+  margin-top: 5ch;
 }
 
 .contact_us_wrapper h1{
@@ -448,17 +458,11 @@ button{
 
 .contact_us_content{
   display: flex;
-  
-
+  width: 100%;
+  margin-bottom: 10px;
+  justify-content: center;
 }
 
-.contact_us_content img{
- filter: grayscale(100%); 
-}
-
-.envelop{
-  width: 50%;
-} 
 
 .sub{
   display: flex;
@@ -466,7 +470,7 @@ button{
   justify-content: center;
   width: 100%;
   align-items: center;
-  height: 100%;
+  height: 90%;
 }
 
 .sub input{
@@ -502,52 +506,51 @@ button{
 }
 
 .submit_section{
-    font-size: clamp(20px, 5vw, 75px) ;
     font-weight: 600;
     border-left: 1px solid #000;  
-    width: 100%;
+    width: 40%;
+    text-align: center;
+}
+
+.contact_info{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 @media only screen and (max-width:600px){
   
-  .contact_us_content img{
-    display:none;
-  }
-  .contact_us_content{
-    width: 80%;
-  }
-  .contact_us_wrapper{
-    width: 100% ;
-    height: 100vh;
-    padding: 10vh 0;
-    min-width: 0px;
+  .contact_us{
+    height: fit-content;
+    
   }
 
-  .contact_us_wrapper h1{
-    margin-bottom: 2ch;
+  .contact_info{
+    width: 80%;
+  }
+
+  .contact_us_content{
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact_us_wrapper{
+    position: relative;
+    width: 100% ;
+    height: fit-content;
+    min-width: 0px;
   }
 
   .submit_section{
-    border-left-color: #f1f1f1;
-    width: 100%;
+    border-left: 1px solid #f1f1f1; 
+    margin-top: 2ch;
+    width: 80%;
   }
 
-  .sub{
-    width: 100%;
-  }
-  .sub input{
-    width: 100%;
-    padding: 1.5ch;
-    min-width: 0px;
-  }
-  .cu_phar{
-    width: 100%;
-    min-width: 0px;
+  .contact_con{
+    margin-bottom: 5px;
   }
 
-  .envelop{
-    min-width: 0px;
-  }
 }
 
 /* Contact us END*/
@@ -610,3 +613,4 @@ button{
     color: #757575;
   }
 /* footer END*/
+
