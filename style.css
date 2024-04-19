@@ -288,7 +288,7 @@ button{
   padding: 3ch;
   width: 100%;
   text-align: center;
-  background-color: #777777;
+  background-color: #777777;  
   margin-bottom: 10px;
 }
 
@@ -309,6 +309,9 @@ button{
 }
 
 .car_card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 25vw;
   border-radius: 10px;
   overflow: hidden;
@@ -321,10 +324,11 @@ button{
   display: flex;
   justify-content: center;
   background-color: #fff;
+  height: 40%;
 }
 
 .car_img img{
-  max-width: 100%;
+ max-width: 100%;
 }
 
 .car_card p{
@@ -333,11 +337,8 @@ button{
 }
 
 .car_info{
-  padding: 20px;
-}
-
-.car_card span{
-  font-weight: 600;
+  padding: 5px;
+  padding-bottom: 0;
 }
 
 .car_card button{
@@ -463,7 +464,7 @@ button{
 .contact_us{
   position:relative;
   background-color: #f1f1f1;
-  height: 100vh;
+  height: fit-content;
   width: 100%;
 }
 
@@ -582,25 +583,25 @@ button{
 /* Contact us END*/
 
 /* footer START*/
-  .pagefooter{
+.pagefooter{
     display: flex;
     flex-direction: column;
     background-color: #202020;
     color:#e4e4e4 ;
     
-  }
+}
 
-  .pagefooter a{
+.pagefooter a{
     color:#757575 ;  
     font-size: small;
-  }
+}
 
-  .pf_upper{
+.pf_upper{
     display: flex;
     padding: 5ch;
     justify-content: space-around;
     flex-wrap:wrap;
-  }
+}
 
   .pf_col{
     display: flex;
@@ -647,3 +648,108 @@ button{
   }
 /* footer END*/
 
+/*reserved START */
+  .reserve{
+    height: fit-content;
+  }
+
+  /* this is from js*/
+.reserve_infos{
+  width: 300px;
+  background-color: #e4e4e4;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px;
+}
+
+.reserve_know{
+  padding: 10px;
+}
+
+
+
+.reserve_know p{
+  margin-bottom: 15px;
+}
+.reserve_car{
+    width: 100%;
+}
+
+.reserved_form_wrapper{
+  width: 50%;
+  box-shadow: 1px 1px 5px;
+}
+
+.reserved_form_wrapper h3{
+  margin-top: 10px ;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #757575;
+}
+
+.reserve_content{
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0;
+}
+
+.reserve_form {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.reserve_text{
+  flex-grow: 0; /* Do not allow the div to grow */
+  flex-shrink: 0; /* Do not allow the div to shrink */
+  flex-basis: calc(50% - 5px); /* Set the initial size of the div */
+  margin-bottom: 20px;
+}
+
+.reserve_text input{
+  width: 90%;
+  padding: 1ch;
+}
+
+.reserve_form label{
+  font-weight: 600;
+  font-size: small;
+  width: 100%;
+}
+
+.reserve_photo_holder{
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.reserve_form input[type = "submit"]{
+  padding: 1ch;
+  width: 100%;
+  background-color: #202020;
+  border: none;
+  color: #e4e4e4;
+}
+
+@media only screen and (max-width:800px){
+  
+  .reserved_form_wrapper{
+    width: 90%;
+  }
+
+  .reserve_content{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reserve_infos{
+    width: 90%;
+    margin-bottom: 50px;
+    margin-left: 5%;
+  }
+
+  .reserve_infos img{
+    width: 70%;
+  }
+}
+/*reserved END */
