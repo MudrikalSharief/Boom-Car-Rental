@@ -64,3 +64,15 @@ function displayReserve(){
         </div>
     `;
 }
+
+function current_date(){
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    let month = currentDate.getMonth() + 1;
+    let day =  currentDate.getDate();
+
+    month = month < 10 ? "0" + month : month;
+    day = day < 10 ? "0" + day : day;
+
+    document.querySelector(".reserve_text input[type='date']").min =  `${year}-${month}-${day}`;
+}

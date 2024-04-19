@@ -302,17 +302,19 @@ button{
 }
 
 .car_card_holder{
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding: 30px;
   /*background-color: blue;*/
+  
 }
 
 .car_card{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 25vw;
+  width: 100%;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 1px 1px 5px;
@@ -337,7 +339,7 @@ button{
 }
 
 .car_info{
-  padding: 5px;
+  padding: 20px;
   padding-bottom: 0;
 }
 
@@ -355,8 +357,8 @@ button{
 @media only screen and (max-width:800px){
 
   .car_card_holder{
-    flex-direction: column;
-    padding: 0 20px;
+    grid-template-columns: repeat(1, 1fr);
+    gap:20px ;
   }
 
   .car_content{
@@ -731,6 +733,12 @@ button{
   color: #e4e4e4;
 }
 
+/* This code will remove the up and down arrow in number */
+input.no-arrows::-webkit-inner-spin-button,
+input.no-arrows::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 @media only screen and (max-width:800px){
   
   .reserved_form_wrapper{
@@ -753,3 +761,5 @@ button{
   }
 }
 /*reserved END */
+
+

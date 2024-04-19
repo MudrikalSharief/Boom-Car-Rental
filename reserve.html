@@ -7,7 +7,7 @@
     <script src="script.js" ></script>
     <title>BooM Car Rental / Reserved</title>
 </head>
-<body onload="displayReserve()">
+<body onload="displayReserve(); current_date();">
     
     <header>
         <nav class = "headnav">     
@@ -59,12 +59,12 @@
                     
                     <div class = "reserve_text">
                         <label for="firstName">Pick Up Date<br></label>
-                        <input type="date" required>
+                        <input type="date" id = "dates"required>
                     </div>
 
                     <div class = "reserve_text">
                         <label for="firstName">Rent Days<br></label>
-                        <input type="number" required>
+                        <input class = "no-arrows" type="number" min ="1" required>
                     </div>
 
                     <div class = "reserve_text"></div>
