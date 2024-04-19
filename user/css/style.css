@@ -1,0 +1,666 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+ /* background-color: #e61010;*/
+  background-color: #fff;
+}
+
+/*  Navigation start */
+.headnav{
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+.navdiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 0 5vw;
+}
+
+.logo img{
+  height: 40px;
+}
+
+.navul ul{
+    display: flex;
+}
+
+.navul a {
+    color: #252525;
+    display: block;
+    padding: 1rem;
+    font-weight: 500;
+}
+
+.navul a:hover{
+  background-color: #dfdfdf;
+}
+
+.active-button{
+  position: absolute;
+  top: .5rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  
+}
+
+.active-button .lines{
+  height: 3px;
+  width: 100%;
+  background-color: #202020;
+  border-radius: 10px;
+  
+}
+
+@media only screen and (max-width:600px){ 
+  
+  .navdiv{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .active-button{
+    display: flex;
+  }
+  
+  .navul{
+    display: none;
+    width: 100%;
+  }
+
+  .navul ul{
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .navul li{
+    text-align: center;
+
+  }
+
+  .navul li a{
+    padding: .5rem 1rem;
+  }
+  /* This line will be responsible in javascript in activating*/
+  .navul.active{
+    display: flex;
+  }  
+
+}
+
+/*  Navigation end */
+
+/* Home Section START*/
+
+button{
+  padding: 1.5ch;
+  width: 200px;
+  min-width: 100px;
+}
+
+.home{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+}
+
+.home_content{
+  display: flex;
+  justify-content:center;
+  align-items: stretch;
+  padding: 12%;
+}
+
+.home_left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #f1f1f1;
+  margin-right: 2%;
+}
+
+.home_left h1{
+  font-size: clamp(20px, 5vw, 75px) ;
+  color: #202020;
+  font-weight: 600;
+}
+
+.home_left p{
+  font-size: clamp(12px, 2vw, 30px);
+  margin: 1ch 0 ;
+  color: #202020;
+}
+
+.home_button{
+  
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.home_button a{
+  width: 100%;
+}
+
+.rent{
+  background-color: #202020;
+  color: #e4e4e4;
+  border: 1px solid #202020;
+  font-size: clamp(10px,1vw,30px);
+  font-weight: 500;
+  border-radius: 10px;
+}
+.home_right{
+  width: 100%;
+  background-color: #e4e4e4;
+  margin-left: 2%;
+}
+
+.home_right img{
+  width: 100%;
+  height: 100%;
+  left: -9%;
+  bottom: -5%;
+  position: relative;
+}
+
+.why{
+  height: fit-content;
+}
+
+.why_wrapper{
+  padding: 50px 30px ;
+ 
+}
+
+.why_wrapper h2{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.why_content{
+  display: flex;
+  padding: 10px;
+}
+
+.home_card{
+  display: flex;
+  margin: 0 5px;
+}
+
+.home_card img{
+  object-fit: scale-down;
+  margin: 5px;
+}
+
+.home_card_info{
+  margin: 5px;
+}
+
+.home_card_info h4{
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width:600px) {
+  button{
+    width: 95%;
+    padding: 1ch;
+  }
+
+  .home{
+    height: fit-content ;
+    padding-bottom: 10px;
+  }
+
+  .home{
+    align-items: flex-start;
+    padding-top: 30px;
+  }
+
+  .home_button {
+    justify-content: space-between;
+  }
+  
+  .home_left h1{
+    /*font-size: 7vw;*/
+    margin-top: .5ch;
+  }
+
+  .home_left p{
+    /*font-size: 4vw;*/
+    text-align: center;
+    max-width: 30ch;
+    text-align: start;
+
+  }
+
+  .home_right{
+    margin: 0;
+    display:flex;
+    justify-content: center;
+  }
+  .home_right img{
+    object-fit: fill;
+  }
+  .home_content{
+    padding: 5vw;
+  }
+  
+  .why_content{
+    flex-direction: column;
+  }
+
+  .home_card{
+    margin: 5px;
+  }
+}
+
+
+
+/* Home Section END*/
+
+/* Car Section START*/
+
+.upper_title{
+  padding: 3ch;
+  width: 100%;
+  text-align: center;
+  background-color: #777777;
+  margin-bottom: 10px;
+}
+
+.car{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+
+.car_card_holder{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 50vh;
+    /*background-color: #165538;*/
+    margin: 5vh 0;
+}
+.car_card{
+    background-color: #e4e4e4;
+    border-radius: 15px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,.5);
+}
+
+.car_card img{
+    width: 25vw;
+    height: 60%;
+    object-fit:fill;
+    background-color: white;
+}
+
+.car_text{
+    padding: clamp(2px, 1vw, 30px);
+}
+
+.car_text h3{
+  font-size: clamp(15px, 1.8vw , 30px);
+}
+
+.car_text p{
+    padding: .2vw 0;
+    font-size: clamp(12px, 1.5vw  , 20px);
+    color: #292828;
+}
+
+.car_button{
+    width: 20vw;
+    min-width: 200px;
+    padding: 1.5ch;
+    border-radius: 10px;
+    background-color: #e4e4e4;
+    border-style: none;
+    color: #202020;  
+    font-weight: 500;
+    font-size: clamp(10px, 1vw, 30px);
+}
+
+
+
+@media only screen and (max-width:1000px){
+  .car_wrapper{
+    justify-content:space-evenly;
+    padding-top: 30px;
+  }
+
+  .car_card_holder{
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 10vw;
+    height: 70vh;
+    margin: 0;
+  }
+  
+  .car_card{
+    display: flex;
+    margin: 2vh 0;
+    
+  }
+
+  .car_card img{
+    height: 20vh;
+    width: 40%;
+    object-fit: scale-down;
+  }
+
+  .car_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+}
+/* Car Section END*/
+
+/* About us Start*/
+.about_us{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4e4e4;
+  height: 100vh;
+  width: 100%;
+}
+
+.about_us_wrapper{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  margin-top:8ch ;
+}
+
+.car_content{
+  display: flex;
+  height: 100%;
+}
+
+.about_us_left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  padding: 5ch;
+}
+
+.about_us_left h2{
+    font-size: clamp(15px, 3vw + 1rem, 100px);  
+}
+
+.about_us_left article{
+  text-align: justify;
+  font-size: clamp(12px, 1.5vw , 30px);  
+  padding-bottom: clamp(5px, 1.5ch, 20px);   
+}
+
+.about_us_right{
+  width: 50%;
+  height: 100%;
+}
+.about_us_right img{
+  height: 90%;
+  width: 100%;
+  object-fit:cover;
+}
+@media only screen and (max-width:600px){
+  .about_us_wrapper{
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    margin-top: 0;
+  }
+  
+  .car_content{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.about_us_left{
+  width: 90%;
+  padding: 3ch;
+}
+
+.about_us_right{
+  width: 60%;
+
+}
+
+.about_us_right img{
+  height: 100%;
+}
+}
+/* About us End*/
+
+
+/* Contact us START*/
+.contact_us{
+  position:relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+  height: 100vh;
+  width: 100%;
+}
+
+.contact_us_wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 550px;
+  margin-top: 5ch;
+}
+
+.contact_us_wrapper h1{
+  font-size: clamp(20px, 5vw, 75px) ;
+  color: #202020;
+  font-weight: 600; 
+}
+
+.contact_us_content{
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+
+.sub{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  height: 90%;
+}
+
+.sub input{
+  margin: 1% 0;
+  min-width: 200px;
+}
+
+.cu_text{
+  padding: 1.5ch;
+  border-radius: 10px;
+  border-style: solid;
+}
+
+.cu_phar{
+  height: 20ch;
+  border-radius: 10px;
+  border: 2px solid #757575;
+  min-width: 200px;
+  margin: 1% 0;
+  padding: 1.5ch;
+  resize: none;
+}
+
+.cu_sub{
+  padding: 1.5ch;
+  border-radius: 20px;
+  border-style: none;
+  background-color: #202020;
+  color: #e4e4e4;
+  font-weight: 500;
+  font-size: clamp(10px, 1vw, 30px)
+  
+}
+
+.submit_section{
+    font-weight: 600;
+    border-left: 1px solid #000;  
+    width: 40%;
+    text-align: center;
+}
+
+.contact_info{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width:600px){
+  
+  .contact_us{
+    height: fit-content;
+    
+  }
+
+  .contact_info{
+    width: 80%;
+  }
+
+  .contact_us_content{
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact_us_wrapper{
+    position: relative;
+    width: 100% ;
+    height: fit-content;
+    min-width: 0px;
+  }
+
+  .submit_section{
+    border-left: 1px solid #f1f1f1; 
+    margin-top: 2ch;
+    width: 80%;
+  }
+
+  .contact_con{
+    margin-bottom: 5px;
+  }
+
+}
+
+/* Contact us END*/
+
+/* footer START*/
+  .pagefooter{
+    display: flex;
+    flex-direction: column;
+    background-color: #202020;
+    color:#e4e4e4 ;
+    
+  }
+
+  .pagefooter a{
+    color:#757575 ;  
+    font-size: small;
+  }
+
+  .pf_upper{
+    display: flex;
+    padding: 5ch;
+    justify-content: space-around;
+    flex-wrap:wrap;
+  }
+
+  .pf_col{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pf_titles{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .pf_logo{
+    height: 30px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+  }
+  
+  .pf_col h5{
+    padding: 10px 0;
+  }
+
+  .pf_col a{
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .pf_icon{
+    height: 15px;
+    margin-right: 5px;
+  }
+
+  .pf_mini{
+    display: flex;
+    font-size: small;
+    color: #757575;
+    margin-bottom: 5px;
+  }
+
+  .pf_lower p{
+    text-align: center;
+    background-color: #161616;
+    color: #757575;
+    font-size: small;
+  }
+/* footer END*/
+
