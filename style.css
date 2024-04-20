@@ -539,21 +539,31 @@ button{
   height: 90%;
 }
 
+.sub_mini{
+  display: flex;
+  flex-direction: column;
+}
+
 .sub input{
   margin: 1% 0;
   min-width: 200px;
+  margin-bottom: 10px;
+}
+
+.sub label{
+  margin: 1% 0;
+  min-width: 200px;
+  width: 100%;
+  text-align: start;
+  font-size: small;
 }
 
 .cu_text{
-  padding: 1.5ch;
-  border-radius: 10px;
-  border-style: solid;
+  padding: 1ch;
 }
 
 .cu_phar{
   height: 20ch;
-  border-radius: 10px;
-  border: 2px solid #757575;
   min-width: 200px;
   margin: 1% 0;
   padding: 1.5ch;
@@ -578,6 +588,10 @@ button{
     text-align: center;
 }
 
+.submit_section h3{
+  padding-bottom: 20px;
+}
+
 .contact_info{
   width: 40%;
   display: flex;
@@ -593,11 +607,13 @@ button{
   }
 
   .contact_info{
+    margin-top: 20px;
     width: 80%;
   }
 
   .contact_us_content{
-    flex-direction: column;
+    flex-direction:column-reverse;
+
     align-items: center;
   }
   .contact_us_wrapper{
@@ -608,7 +624,7 @@ button{
   }
 
   .submit_section{
-    border-left: 1px solid #f1f1f1; 
+    border-left: 1px solid #fff; 
     margin-top: 2ch;
     width: 80%;
   }
@@ -775,6 +791,14 @@ input.no-arrows::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+@media only screen and (max-width:600px){
+  .reserve_text{
+    flex-basis:auto;
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width:800px){
   
   .reserved_form_wrapper{
@@ -795,6 +819,7 @@ input.no-arrows::-webkit-outer-spin-button {
   .reserve_infos img{
     width: 70%;
   }
+
 }
 /*reserved END */
 

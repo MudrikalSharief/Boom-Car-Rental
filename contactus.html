@@ -67,10 +67,26 @@
                 <div class="submit_section">
                     <h3>Contact Form</h3>
                     <form  class="sub" id = 'sub' autocomplete="off">
-                        <input type="text" placeholder="Last Name" class = "cu_text" required>
-                        <input type="text" placeholder="First Name" class = "cu_text"  required>
-                        <input type="email" placeholder="Email" class = "cu_text" required>
-                        <textarea  placeholder="Message" class = "cu_phar" required></textarea>
+                        <div class = "sub_mini">
+                            <label for="contact_us_ln">Last Name<br></label>
+                            <input type="text"  class = "cu_text" id="contact_us_ln" required>
+                        </div>
+                        
+                        <div class = "sub_mini">
+                            <label for="contact_us_fn">First Name<br></label>
+                            <input type="text"  class = "cu_text" id="contact_us_fn"  required>
+                        </div>
+
+                        <div class = "sub_mini">
+                            <label for="contact_us_em">Email<br></label>
+                            <input type="email"  class = "cu_text" id="contact_us_em" required>
+                        </div>
+                        
+                        <div class = "sub_mini">
+                            <label for="contact_us_ta">Message<br></label>
+                            <textarea   class = "cu_phar" id="contact_us_ta" required></textarea>
+                        </div>
+                        
                         <input type="submit"   class = "cu_sub ">
                     </form>
                 </div>
