@@ -5,6 +5,7 @@
     list-style: none;
     text-decoration: none;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease-in;
 }
 
 html{
@@ -25,6 +26,7 @@ section{
   position: fixed;
   z-index: 1;
   width: 100%;
+  overflow: hidden;
 }
 .navdiv{
     display: flex;
@@ -51,6 +53,7 @@ section{
 
 .navul a:hover{
   background-color: #dfdfdf;
+  transform: scale(1.1);
 }
 
 .active-button{
@@ -71,6 +74,27 @@ section{
   background-color: #202020;
   border-radius: 10px;
   
+}
+
+.navul li:nth-child(5){
+  display: none;
+}
+
+.manage_booking{
+  padding:  1ch 2ch;
+  width: fit-content;
+  color: #1b1b1b;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #777777;
+}
+
+.manage_booking:hover{
+  background-color:#202020 ;
+  color: #dfdfdf;
+  transform: scale(1.1);
 }
 
 @media only screen and (max-width:600px){ 
@@ -106,6 +130,14 @@ section{
   .navul.active{
     display: flex;
   }  
+
+  .manage_booking{
+    display: none;
+  }
+
+  .navul li:nth-child(5){
+    display: block;
+  }
 
 }
 
@@ -156,7 +188,6 @@ button{
 }
 
 .home_button{
-  
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -171,8 +202,15 @@ button{
   border: 1px solid #202020;
   font-size: clamp(10px,1vw,30px);
   font-weight: 500;
-  border-radius: 10px;
+  border-radius: 5px;
 }
+
+.rent:hover{
+  transform: scale(1.1);
+  background-color: #e4e4e4;
+  color: #202020;
+}
+
 .home_right{
   width: 100%;
   background-color: #e4e4e4;
@@ -189,6 +227,7 @@ button{
 
 .why{
   height: fit-content;
+  background-color: #e4e4e4;
 }
 
 .why_wrapper{
@@ -345,7 +384,8 @@ button{
 
 .car_card button{
   margin: 10px 20px;
-  width: 50px;
+  width: 200px;
+  min-width: 150px;
   border-radius: 5px;
   border-style: none;
   font-size: 12px;
@@ -386,7 +426,6 @@ button{
 .about_us{
   display: flex;
   justify-content: center;
-  background-color: #e4e4e4;
   height: fit-content;
   width: 100%;
 }
@@ -465,7 +504,6 @@ button{
 /* Contact us START*/
 .contact_us{
   position:relative;
-  background-color: #f1f1f1;
   height: fit-content;
   width: 100%;
 }
@@ -668,8 +706,6 @@ button{
   padding: 10px;
 }
 
-
-
 .reserve_know p{
   margin-bottom: 15px;
 }
@@ -731,6 +767,7 @@ button{
   background-color: #202020;
   border: none;
   color: #e4e4e4;
+  margin-top: 50px;
 }
 
 /* This code will remove the up and down arrow in number */
@@ -762,4 +799,79 @@ input.no-arrows::-webkit-outer-spin-button {
 }
 /*reserved END */
 
+/* manage START*/
+.manage{
+  height: fit-content;
+  width: 100%;
+}  
 
+.manage_content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.manage_pic{
+  width: 40%;
+  min-width: 200px;
+}
+
+.manage_pic img{
+  width: 100%;
+}
+
+.manage_form_wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.manage_form_wrapper h3{
+  margin: 20px 0;
+  text-align: center;
+}
+
+.manage_form_wrapper p{
+  text-align: center;
+  font-size: small+1px;
+  margin-bottom:20px;
+  
+}
+
+.manage_form{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+}
+
+.manage_form p{
+  font-size: small;
+  width: 90%;
+  text-align: start;
+  color: #757575;
+}
+
+.manage_form input{
+  width: 90%;
+  padding: 1ch;
+}
+
+.manage_form label{
+  font-weight: 600;
+  font-size: small;
+  width: 90%;
+}
+
+.manage_form input[type = "submit"]{
+  border-radius: 5px;
+  border: none;
+  background-color: #188d2b;
+  color: #e4e4e4;
+}
+
+/* manage END*/
