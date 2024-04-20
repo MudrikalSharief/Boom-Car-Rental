@@ -328,7 +328,6 @@ button{
   width: 100%;
   text-align: center;
   background-color: #777777;  
-  margin-bottom: 10px;
 }
 
 .car{
@@ -343,7 +342,7 @@ button{
 .car_card_holder{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
+  gap: 40px;
   padding: 30px;
   /*background-color: blue;*/
   
@@ -358,6 +357,7 @@ button{
   overflow: hidden;
   box-shadow: 1px 1px 5px;
   background-color: #f1f1f1;
+  align-items: center;
 }
 
 .car_img{
@@ -397,7 +397,7 @@ button{
 @media only screen and (max-width:800px){
 
   .car_card_holder{
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap:20px ;
   }
 
@@ -422,81 +422,80 @@ button{
   }
 
 }
+@media only screen and (max-width:600px){
+  .car_card_holder{
+    grid-template-columns: repeat(1, 1fr);
+    gap:20px ;
+  }
+}
 /* About us Start*/
 .about_us{
+  position: relative;
   display: flex;
   justify-content: center;
-  height: fit-content;
+  height: 100vh;
   width: 100%;
+}
+
+.about_us_background{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url('pics/about\ us\ puc.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(2px);
 }
 
 .about_us_wrapper{
   display: flex;
-  height: fit-content;
   flex-direction: column;
+  width: 100%;
 }
 
 .about_content{
+  position: relative;
   display: flex;
   height: 100%;
-  margin-bottom: 5px;
+
 }
 
 .about_us_left{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 50%;
-  padding: 20px;
+  width: 100%;
+  padding: 40px 20px;
+  background-color: rgba(39, 39, 39, 0.5);
+  color: #f1f1f1;
+  justify-content: center;
+  
+}
+
+.about_us_left article{
+  text-align: center;
+  font-size: medium;
+  padding-bottom: clamp(5px, 1.5ch, 20px);  
 }
 
 .about_us_left h2{
     font-size: clamp(15px, 3vw + 1rem, 100px);  
 }
 
-.about_us_left article{
-  text-align: justify;
-  font-size: clamp(12px, 1.5vw , 30px);  
-  padding-bottom: clamp(5px, 1.5ch, 20px);   
-}
-
-.about_us_right{
-  width: 50%;
-  height: 100%;
-}
-.about_us_right img{
-  height: fit-content;
-  width: 100%;
-  object-fit:fill;
-}
 @media only screen and (max-width:600px){
+
+  section{
+    padding-top: 40px;
+  }
+
   .about_us_wrapper{
     position: relative;
-    flex-direction: column;
     width: 100%;
-    height: fit-content;
+    height: 100vh;
     margin-top: 0;
   }
-  
-  .about_content{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .about_us_left{
-  width: 90%;
-  padding: 3ch;
-  }
 
-  .about_us_right{
-    width: 80%;
-
-  }
-
-  .about_us_right img{
-    height: 100%;
-  }
 }
 /* About us End*/
 
@@ -526,7 +525,7 @@ button{
 .contact_us_content{
   display: flex;
   width: 100%;
-  margin-bottom: 10px;
+  margin :10px 0;
   justify-content: center;
 }
 
@@ -587,7 +586,7 @@ button{
 }
 
 @media only screen and (max-width:600px){
-  
+
   .contact_us{
     height: fit-content;
     
