@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boom Car Rental/ rent</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" ></script>
-    <title>BooM Car Rental / Reserved</title>
 </head>
-<body onload="displayReserve(); current_date();">
-    
+<body onload="displayReserve(); displayConfirm();">
+
     <header>
         <nav class = "headnav">     
             <div class = "navdiv">
                 <div class = "logo"><a href="index.html"><img src="pics/logo-transparent-png.png" alt="Logo"></a></div>        
-                 
+                
                 <div class = "active-button">
                     <span class = "lines"></span>
                     <span class = "lines"></span>
@@ -34,49 +34,36 @@
         </nav>
     </header>
 
-    <section class = "reserve">
-        <div class = "upper_title">
-            <h2>Car Reservation</h2>
-        </div>
-        <div class = "reserve_content">
-            <div id = "reserve_info"></div>
-            
-            <div class = "reserved_form_wrapper">
-                <h3>Rent Form</h3>
-                <form action="checkout.html" class = "reserve_form">
-                    <div class = "reserve_text">
-                        <label for="firstName">First Name<br></label>
-                        <input type="text" id="firstName" required> 
-                    </div>
-                        
-                    <div class = "reserve_text">
-                        <label for="lastName">Last Name<br></label>
-                        <input type="text" id="lastName" required>
-                    </div>
-                        
-                    <div class = "reserve_text"> 
-                        <label for="user_email">Email<br></label>
-                        <input type="email" id="user_email" required>
-                    </div>
-                    
-                    <div class = "reserve_text">
-                        <label for="dates">Pick Up Date<br></label>
-                        <input type="date" id = "dates"required>
-                    </div>
-
-                    <div class = "reserve_text">
-                        <label for="num">Rent Days<br></label>
-                        <input class = "no-arrows" id="num" type="number" min ="1" required>
-                    </div>
-
-                    <input type="submit" onclick="confirm(this)">
-                   
-                </form>
+    <section class="confirm">
+        <div class = "confirm_wrapper">
+            <div class = "upper_title">
+                <h2>Renting Out</h2>
             </div>
+            <div class = "confirm_content">
+                <div class = "confirm_check">
+                    
+                    <div class ="confirm_info" id="reserve_info"></div>
+
+                    <div class = "confirm_card">
+                        <div class = "confirm_card_title">
+                            <h3>Summary</h3>
+                        </div>
+                        
+                        <div id = "confirm_card_infos"></div>
+
+                        <div class = "confirm_card_button">
+                            <a id="create_random"><button type="submit" onclick="handleButtonClick()">Confirm</button></a>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            
         </div>
     </section>
-
-
 
     <footer class="pagefooter">
         <div class = "pf_upper">
@@ -112,5 +99,7 @@
             <p>&copy;Copyright 2024</p>
         </div>
     </footer>
+
+
 </body>
 </html>

@@ -5,7 +5,6 @@
     list-style: none;
     text-decoration: none;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: all 0.3s ease-in;
 }
 
 html{
@@ -49,11 +48,13 @@ section{
     display: block;
     padding: 1rem;
     font-weight: 500;
+    transition: all 0.1s ease-out;
 }
 
 .navul a:hover{
   background-color: #dfdfdf;
-  transform: scale(1.1);
+  transform:scale(1.1);
+  transition: all 0.1s ease-in;
 }
 
 .active-button{
@@ -89,12 +90,14 @@ section{
   font-weight: 500;
   cursor: pointer;
   background-color: #777777;
+  transition: all 0.1s ease-out;
 }
 
 .manage_booking:hover{
   background-color:#202020 ;
   color: #dfdfdf;
   transform: scale(1.1);
+  transition: all 0.1s ease-in;
 }
 
 @media only screen and (max-width:600px){ 
@@ -203,12 +206,14 @@ button{
   font-size: clamp(10px,1vw,30px);
   font-weight: 500;
   border-radius: 5px;
+  transition: all 0.1s ease-in;
 }
 
 .rent:hover{
   transform: scale(1.1);
   background-color: #e4e4e4;
   color: #202020;
+  transition: all 0.1s ease-in;
 }
 
 .home_right{
@@ -391,6 +396,14 @@ button{
   font-size: 12px;
   background-color: #202020;
   color: #e4e4e4;
+  transition: all 0.1s ease-in;
+}
+
+.car_card button:hover{
+  transform: scale(1.1);
+  transition: all 0.1s ease-in;
+  background-color: #777777;
+  color: #202020;
 }
 
 /* Car Section END*/
@@ -467,16 +480,16 @@ button{
   flex-direction: column;
   width: 100%;
   padding: 40px 20px;
-  background-color: rgba(39, 39, 39, 0.5);
-  color: #f1f1f1;
+  background-color: rgba(0, 0, 0, 0.8);
   justify-content: center;
   
 }
 
 .about_us_left article{
   text-align: center;
-  font-size: medium;
+  font-size:large;
   padding-bottom: clamp(5px, 1.5ch, 20px);  
+  color: #dfdfdf;
 }
 
 .about_us_left h2{
@@ -523,6 +536,7 @@ button{
 }
 
 .contact_us_content{
+  position: relative;
   display: flex;
   width: 100%;
   margin :10px 0;
@@ -577,8 +591,13 @@ button{
   background-color: #202020;
   color: #e4e4e4;
   font-weight: 500;
-  font-size: clamp(10px, 1vw, 30px)
-  
+  font-size: clamp(10px, 1vw, 30px);
+  transition: all 0.1s ease-in;
+}
+
+.cu_sub:hover{
+  transform: scale(1.1);
+  transition: all 0.1s ease-in;
 }
 
 .submit_section{
@@ -597,6 +616,60 @@ button{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  padding-right: 10px;
+}
+
+.popup_wrapper{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: calc(100% + 20px);
+  top: -10px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  visibility:hidden;
+  transition: none ; 
+}
+
+.popup_on{
+  visibility: visible;
+}
+
+.popup_holder{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*background-color: #757575;*/
+  width: 100%;
+}
+
+.popup{
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: fit-content;
+  min-width: 250px;
+  background-color: white;
+  padding: 50px;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.popup h3{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.popup p{
+  font-size: small;
+}
+
+.popup button{
+  margin-top: 20px;
+  background-color: #188d2b;
+  border: none;
+  border-radius: 5px;
 }
 
 @media only screen and (max-width:600px){
@@ -783,6 +856,14 @@ button{
   border: none;
   color: #e4e4e4;
   margin-top: 50px;
+  transition: all 0.1 ease-in;
+}
+
+.reserve_form input[type = "submit"]:hover{
+  background-color: #757575;
+  color: #202020;
+  transform: scale(1.02);
+  transition: all 0.1 ease-in;
 }
 
 /* This code will remove the up and down arrow in number */
@@ -896,6 +977,255 @@ input.no-arrows::-webkit-outer-spin-button {
   border: none;
   background-color: #188d2b;
   color: #e4e4e4;
+  transition: all 0.3 ease-in;
+}
+
+.manage_form input[type = "submit"]:hover{
+  transform: scale(1.1);
+  transition: all 0.3 ease-in;
 }
 
 /* manage END*/
+
+/* checkout START*/
+
+.checkout{
+  height: 100vh;
+  width: 100%;
+}
+
+.checkout_wrapper{
+  height: 100%;
+ /* background-color: #188d2b;*/
+}
+
+.checkout_content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-color: blue ;*/
+  height: 90%;
+}
+
+
+
+.checkout_card{
+  background-color: #ffffff;
+  max-width: 250px;
+  min-width: 150px;
+  padding: 20px;
+  height: fit-content;
+  box-shadow: 1px 1px 5px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.checkout_title h3{
+  margin-bottom: 20px;
+}
+
+.checkout_title p{
+  font-size: small;
+}
+
+.checkout_form{
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout_form input[type = "number"]{
+  font-size: medium;
+  padding: 1ch;
+  margin: 20px;
+  width: 100%;
+  align-self: center;
+}
+
+.checkout_form input[type = 'submit']{
+  padding: 1ch;
+  border-radius: 5px;
+  border: none;
+  background-color: #188d2b;
+}
+
+.checkout_form input[type = 'submit']:hover{
+  transform: scale(1.1);
+}
+
+
+input.digit_input::-webkit-inner-spin-button,
+input.digit_input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* checkout END*/
+
+/* rent START*/
+
+.confirm{
+  height: fit-content;
+  width: 100%;
+}
+
+.confirm_wrapper{
+  height: fit-content;
+}
+
+.confirm_content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-color: violet;*/
+  height: 100%;
+}
+
+.confirm_check{
+  display: flex;
+  /*background-color: red;*/
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  margin: 20px 10px;
+
+}
+
+.confirm_info{
+  margin: 10px;
+}
+
+.confirm_card{
+  min-width: 280px;
+  /*background-color: #188d2b;*/
+  margin: 10px;
+  padding: 20px;
+  padding-top: 5px;
+}
+
+.confirm_card_2{
+  display: block;
+  min-width: 280px;
+  background-color: #188d2b;
+  margin: 10px;
+  padding: 20px;
+  padding-top: 5px;
+}
+
+.confirm_card_title{
+  text-align: center;
+}
+
+.confirm_card_infos{
+  margin-top: 20px;
+}
+
+#confirm_card_infos{
+  max-width: 280px;
+  /*background-color: #188d2b;*/
+  
+}
+.confirm_card_info p{
+  margin: 10px 0;
+}
+
+.confirm_card_button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40%;
+}
+
+.confirm_card_button button{
+  border-radius: 5px;
+  border: none;
+  background-color: #188d2b;
+  transition: all 0.3 ease-in;
+}
+
+.confirm_card_button button:hover{
+  transform: scale(1.1);
+}
+
+.confirm_succes{
+  background-color: #39a54b;
+  height: 100%;
+  z-index: 2;
+}
+
+@media only screen and (max-width:800px){
+  .confirm_check{
+    flex-direction: column-reverse;
+  }
+}
+/* rent END */
+
+/* succes START */
+.succes{
+  height: 100vh;
+  width: 100%;
+}
+
+.succes_wrapper{
+  height: 100%;
+ /*background-color: red;*/
+}
+
+.succes_content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ /* background-color: blue;*/
+  height: 80%;
+}
+
+.success_card{
+  height: 300px;
+  width: 250px;
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 1px 1px 5px;
+  border-radius: 10px;
+}
+
+.success_card h3{
+  text-align: center;
+  color:#1dad35;
+}
+
+.success_card h5{
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.success_card p{
+  font-size: small;
+  margin-bottom: 10px;
+}
+
+.succes_button_wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success_card button{
+  border-radius: 5px;
+  border: none;
+  margin: 10px 0;
+}
+
+.success_card button:hover{
+  transform: scale(1.1);
+}
+
+.succes_button_view{
+  background-color: #188d2b;
+  color: #dfdfdf;
+}
+
+.succes_button_home{
+  background-color: #202020;
+  color: #dfdfdf;
+}
+/* succes END */

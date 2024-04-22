@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>succes</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" ></script>
-    <title>BooM Car Rental / Reserved</title>
 </head>
-<body onload="displayReserve(); current_date();">
+<body onload="displayStoredRandomNumber()">
     
     <header>
         <nav class = "headnav">     
             <div class = "navdiv">
                 <div class = "logo"><a href="index.html"><img src="pics/logo-transparent-png.png" alt="Logo"></a></div>        
-                 
+                
                 <div class = "active-button">
                     <span class = "lines"></span>
                     <span class = "lines"></span>
@@ -34,49 +34,30 @@
         </nav>
     </header>
 
-    <section class = "reserve">
-        <div class = "upper_title">
-            <h2>Car Reservation</h2>
-        </div>
-        <div class = "reserve_content">
-            <div id = "reserve_info"></div>
-            
-            <div class = "reserved_form_wrapper">
-                <h3>Rent Form</h3>
-                <form action="checkout.html" class = "reserve_form">
-                    <div class = "reserve_text">
-                        <label for="firstName">First Name<br></label>
-                        <input type="text" id="firstName" required> 
-                    </div>
-                        
-                    <div class = "reserve_text">
-                        <label for="lastName">Last Name<br></label>
-                        <input type="text" id="lastName" required>
-                    </div>
-                        
-                    <div class = "reserve_text"> 
-                        <label for="user_email">Email<br></label>
-                        <input type="email" id="user_email" required>
-                    </div>
+
+    <section class = "succes">
+        <div class = "succes_wrapper">
+            <div class = "upper_title">
+                <h2>Success</h2>
+            </div>
+            <div class="succes_content">
+                <div class = "success_card">
+                    <h3>Congratulations!!</h3>
+                    <h5>You succesfully rented a car.</h5>
+
+                    <p>Transaction ID:</p>
+                    <div id="transaction_id"></div>
+
+                    <p>Use this id to see your transaction in manage booking</p>
                     
-                    <div class = "reserve_text">
-                        <label for="dates">Pick Up Date<br></label>
-                        <input type="date" id = "dates"required>
+                    <div class = "succes_button_wrapper">
+                        <button class = "succes_button_view">View Booking</button>
+                        <a href="index.html"><button class = "succes_button_home">Back to Home</button></a>
                     </div>
-
-                    <div class = "reserve_text">
-                        <label for="num">Rent Days<br></label>
-                        <input class = "no-arrows" id="num" type="number" min ="1" required>
-                    </div>
-
-                    <input type="submit" onclick="confirm(this)">
-                   
-                </form>
+                </div>
             </div>
         </div>
     </section>
-
-
 
     <footer class="pagefooter">
         <div class = "pf_upper">
@@ -112,5 +93,7 @@
             <p>&copy;Copyright 2024</p>
         </div>
     </footer>
+
+
 </body>
 </html>
