@@ -33,15 +33,47 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     let okButton = document.querySelector('.popup_wrapper button');
-    okButton.addEventListener('click', popup_off);  
+    okButton.addEventListener('click', popup_off); 
 
 
-
-    //This code is responsible in confim button of confirm and the displaying of id in success
-    // Add event listener to the button
-   
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    //this code is responsible in preview for showing the cancel
+    document.getElementById('preview_cancels').addEventListener('click', function() {
+        console.log('button is clicked')
+        var targetDiv = document.getElementById('preview_cancel_wrappers');
+        targetDiv.classList.add('show_flex');
+    });
+
+    document.getElementById('preview_button_yes').addEventListener('click', function() {
+        console.log('button is clicked')
+        var targetDiv = document.getElementById('preview_areyousure_confirm');
+        var targetDiv2 = document.getElementById('preview_areyousure');
+        targetDiv.classList.add('show_flex');
+        targetDiv2.classList.add('hide_flex');
+    });
+
+    document.getElementById('preview_button_no').addEventListener('click', function() {
+        console.log('button is clicked')
+        var targetDiv = document.getElementById('preview_cancel_wrappers');
+        targetDiv.classList.remove('show_flex');
+    });
+
+    document.getElementById('preview_button_confirm').addEventListener('click', function() {
+        console.log('button is clicked')
+        var targetDiv = document.getElementById('preview_cancel_wrappers');
+        targetDiv.classList.remove('show_flex');
+
+        var targetDiv1 = document.getElementById('preview_areyousure_confirm');
+        var targetDiv3 = document.getElementById('preview_areyousure');
+        targetDiv1.classList.remove('show_flex');
+        targetDiv3.classList.remove('hide_flex');
+
+    });
+
+
+});
  //==================================this ocee is used in car to go to reserve
 function reserve(button){
     // getting the parent
@@ -86,11 +118,11 @@ function displayReserve(){
             </div>
             
             <div class = "reserve_know">
-                <h3 class = "reserve_name"> ${carName}</h3>
-                <p class = "reserve_price">Price : ${carPrice}</p>
-                <p class = "reserve_seat"> ${carSeat}</p>
-                <p class = "reserve_bag"> ${carBag}</p>
-                <p class = "reserve_trans"> ${carTrans}</p>
+                <h3 class = "reserve_name">${carName}</h3>
+                <p class = "reserve_price"><strong>Price / day :</strong> ${carPrice}</p>
+                <p class = "reserve_seat"><strong>Passenger : </strong> ${carSeat}</p>
+                <p class = "reserve_bag"><strong>Luggage : </strong> ${carBag}</p>
+                <p class = "reserve_trans"><strong>Transmission : </strong> ${carTrans}</p>
             </div>    
         </div>
     `;
