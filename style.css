@@ -480,14 +480,17 @@ button{
   padding: 40px 20px;
   background-color: rgba(0, 0, 0, 0.8);
   justify-content: center;
-  
+  align-items: center;
 }
 
 .about_us_left article{
+  width: 50%;
+  min-width: 250px;
   text-align: center;
   font-size:large;
   padding-bottom: clamp(5px, 1.5ch, 20px);  
   color: #dfdfdf;
+  text-align: justify;
 }
 
 .about_us_left h2{
@@ -499,11 +502,10 @@ button{
   section{
     padding-top: 40px;
   }
-
+  
   .about_us_wrapper{
     position: relative;
     width: 100%;
-    height: 100vh;
     margin-top: 0;
   }
 
@@ -554,6 +556,7 @@ button{
 .sub_mini{
   display: flex;
   flex-direction: column;
+  width: 90%;
 }
 
 .sub input{
@@ -601,7 +604,7 @@ button{
 .submit_section{
     font-weight: 600;
     border-left: 1px solid #000;  
-    width: 40%;
+    width: 50%;
     text-align: center;
 }
 
@@ -610,11 +613,11 @@ button{
 }
 
 .contact_info{
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding-right: 10px;
+  padding: 20px;
 }
 
 .popup_wrapper{
@@ -680,6 +683,7 @@ button{
   .contact_info{
     margin-top: 20px;
     width: 80%;
+    padding: 0;
   }
 
   .contact_us_content{
@@ -704,6 +708,9 @@ button{
     margin-bottom: 5px;
   }
 
+  .sub_mini{
+    width: 100%;
+  }
 }
 
 /* Contact us END*/
@@ -786,6 +793,7 @@ button{
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 1px 1px 5px;
+
 }
 
 .reserve_know{
@@ -860,6 +868,7 @@ button{
   color: #e4e4e4;
   margin-top: 50px;
   transition: all 0.1 ease-in;
+  border-radius: 5px;
 }
 
 .reserve_form input[type = "submit"]:hover{
@@ -899,6 +908,7 @@ input.no-arrows::-webkit-outer-spin-button {
     margin-bottom: 50px;
     margin-left: 5%;
   }
+
 
   .reserve_infos img{
     width: 70%;
@@ -1087,14 +1097,23 @@ input.digit_input::-webkit-outer-spin-button {
   /*background-color: red;*/
   align-items: center;
   justify-content: center;
-  width: fit-content;
+  width: 100%;
   height: fit-content;
   margin: 20px 10px;
 
 }
 
 .confirm_info{
+  display: flex;
+  justify-content: center;
   margin: 10px;
+  width: 50%;
+  align-items: center;
+}
+
+.color_green{
+  color: #1dad35;
+  font-weight: 500;
 }
 
 .confirm_card{
@@ -1103,6 +1122,7 @@ input.digit_input::-webkit-outer-spin-button {
   margin: 10px;
   padding: 20px;
   padding-top: 5px;
+  width: 50%;
 }
 
 .confirm_card_2{
@@ -1118,34 +1138,103 @@ input.digit_input::-webkit-outer-spin-button {
   text-align: center;
 }
 
-.confirm_card_infos{
+#confirm_card_infos{
+  min-width: 280px;
+  /*background-color: #188d2b;*/
   margin-top: 20px;
+  width: 100%;
 }
 
-#confirm_card_infos{
-  max-width: 280px;
-  /*background-color: #188d2b;*/
-  
+.confirm_card_info{
+  width: 100%;
 }
 .confirm_card_info p{
   margin: 10px 0;
+}
+
+.confirm_payment{
+  height: fit-content;
+  width: 100%;
+  margin-top: 20px;
+
+}
+
+.confirm_logo_holder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #e4e4e4;
+  width: 100%;
+}
+
+.logo_card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: scale-down;
+  height: 50px;
+  width: 50px;
+  background-color: #fff;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+}
+/*==================================*/
+.dropdown{
+  margin-top: 10px;
+}
+
+.dropdown select{
+  height: 40px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 50%;
+}
+
+#paymentMethods option{
+  text-align: start;
+  padding: 10px;
+}
+
+
+/*==================================*/
+.logo_card:hover{
+  transform: scale(1.1);
+}
+
+.logo_card img{
+ height: 30px;
+ width: 30px;
+  object-fit: scale-down;
 }
 
 .confirm_card_button{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40%;
+  margin-top: 10%;
 }
 
-.confirm_card_button button{
+.logo_card{
+  margin-right: 5%;
+}
+
+.confirm_button{
   border-radius: 5px;
   border: none;
   background-color: #188d2b;
   transition: all 0.3 ease-in;
 }
 
-.confirm_card_button button:hover{
+.confirm_button:disabled{
+  background-color: #8d1818;
+  color: #777777;
+  pointer-events: none;
+}
+
+.confirm_button:hover{
   transform: scale(1.1);
 }
 
@@ -1158,6 +1247,14 @@ input.digit_input::-webkit-outer-spin-button {
 @media only screen and (max-width:800px){
   .confirm_check{
     flex-direction: column-reverse;
+  }
+
+  .confirm_card{
+    width: 90%;
+  }
+
+  .confirm_info{
+    width: 90%;
   }
 }
 /* rent END */

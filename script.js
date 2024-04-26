@@ -1,3 +1,44 @@
+//==========this code is to restrict in confirm to  press the button if the selected payment method is none
+
+document.addEventListener('DOMContentLoaded', function(){
+    var selectElement = document.getElementById('paymentMethods');
+    var confirmButton = document.querySelector('.confirm_button');
+
+
+
+    // Add event listener to the select element
+    selectElement.addEventListener('change', function() {
+        var selectedValue = this.value;
+        console.log("value is change");
+        // Enable or disable the button based on the selected value
+        if (selectedValue === "none") {
+            confirmButton.disabled = true;
+        } else {
+            confirmButton.disabled = false;
+        }
+    });
+
+    // Get all logo_card elements
+    var logoCards = document.querySelectorAll('.logo_card');
+
+    // Add click event listener to each logo_card
+    logoCards.forEach(function(logoCard, index) {
+        logoCard.addEventListener('click', function() {
+            // Get the corresponding payment method value
+            var paymentMethodValue = index + 1; // Index starts from 0, payment method values start from 1
+
+        
+            // Set the selected value in the dropdown
+            var paymentMethodsDropdown = document.getElementById('paymentMethods');
+            paymentMethodsDropdown.value = paymentMethodValue;
+
+
+            // Trigger change event on the dropdown (to make sure any associated event listeners are also triggered)
+            var event = new Event('change');
+            paymentMethodsDropdown.dispatchEvent(event);
+        });
+    });
+});
 
 //==================This code is used for menu
 document.addEventListener('DOMContentLoaded', function() {
@@ -38,6 +79,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     //this code is responsible in preview for showing the cancel
     document.getElementById('preview_cancels').addEventListener('click', function() {
@@ -74,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 });
+
  //==================================this ocee is used in car to go to reserve
 function reserve(button){
     // getting the parent
@@ -167,13 +212,18 @@ function displayConfirm(){
     // Multiply carPrice by rentDuration
     var totalPrice = carPriceNum * rentDurationNum;
 
-
     var pickupDate = new Date(rentDate);
     // Calculate the return date by adding the rent duration to the pickup date
     var returnDate = new Date(pickupDate);
     returnDate.setDate(returnDate.getDate() + parseInt(rentDuration, 10));
     // Format the return date as desired (e.g., YYYY-MM-DD)
     var returnDateString = `${returnDate.getFullYear()}-${(returnDate.getMonth() + 1).toString().padStart(2, '0')}-${returnDate.getDate().toString().padStart(2, '0')}`;
+
+    var reservepayment = totalPrice * 0.20;
+
+    
+    
+    //this code above is responsible for displaying the payment method
 
 
     var reservedInfo = document.getElementById('confirm_card_infos');
@@ -186,10 +236,21 @@ function displayConfirm(){
         <p><strong>Return return :</strong> ${returnDateString}</p>
         <p><strong>Total rent day :</strong> ${rentDuration} days</p>
         <p><strong>Total price :</strong> ${totalPrice}</p>
+        <p><strong>Reservation price:</strong><span class = "color_green"> ${reservepayment}<span></p>
         </div>
     
     `;
+   
+    //this code below is responsible for displaying the payment method
+        var payment_method = localStorage.getItem('selectedPaymentMethod')
+        
+        var reservedInfo = document.getElementById('confirm_card_payentMethod');
+      reservedInfo.innerHTML =  `
+        <p><strong>Payment Method :</strong> ${payment_method}<p/>
+    `;
 }
+
+
 
 //===================================this code is used in fate in reservation
 function current_date(){
@@ -215,6 +276,16 @@ function handleButtonClick() {
     localStorage.setItem('randomNumber', randomNum);
 
     // Redirect to the next HTML page
+
+    var paymentMethodSelect = document.getElementById("paymentMethods");
+    var selectedPaymentMethod = paymentMethodSelect.options[paymentMethodSelect.selectedIndex].text;
+
+        // Store the selected payment method in localStorage
+    localStorage.setItem("selectedPaymentMethod", selectedPaymentMethod);
+    
+
+    // thiscode tis to unhode the payment method
+
     window.location.href = 'succes.html';
 }
 
@@ -229,3 +300,34 @@ function displayStoredRandomNumber() {
     `;
     
 }
+
+// this is for the error in  manage account if the account doesnt match
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("manage_form").addEventListener("submit", function(event) {
+        // Prevent default form submission
+        event.preventDefault();
+
+        // Retrieve entered email and booking ID
+        var enteredEmail = document.getElementById("booking_email").value;
+        var enteredBookingID = parseInt(document.getElementById("booking_id").value);
+
+        // Retrieve stored email and booking ID from localStorage
+        var storedEmail = localStorage.getItem("email");
+        var storedBookingID = parseInt(localStorage.getItem("randomNumber"));
+
+        // Compare entered email and booking ID with stored values
+        if (enteredEmail === storedEmail && enteredBookingID === storedBookingID) {
+            // If they match, proceed to the next page
+            window.location.href = "preview.html";
+        } else {
+            // If they don't match, display an error message
+            var errorMessage = "Entered email or booking ID is incorrect.";
+            document.getElementById("error_message").innerText = errorMessage;
+
+            // Clear the error message after 3 seconds
+            setTimeout(function() {
+                document.getElementById("error_message").innerText = "";
+            }, 3000); // 3000 milliseconds = 3 seconds
+        }
+    });
+});

@@ -51,8 +51,33 @@
                         
                         <div id = "confirm_card_infos"></div>
 
+                        <div class="confirm_payment">
+                            <div class="confirm_logo_holder">
+                                <p class="logo_card"><img src="pics/gcash.png" alt=""></p>
+                                <p class="logo_card"><img src="pics/paypal.png" alt=""></p>
+                                <p class="logo_card"><img src="pics/palawan.png" alt=""></p>
+                                <p class="logo_card"><img src="pics/visa.png" alt=""></p>
+                                <p class="logo_card"><img src="pics/711.png" alt=""></p>
+                                
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="dropdown">
+                                <label for="paymentMethods">Select a payment method:</label>
+                                <select id="paymentMethods" >
+                                  <option value="none">--Select--</option>
+                                  <option value="1"><span class="payment_info">GCash</span></option>
+                                  <option value="2"><span class="payment_info">PayPal</span></option>
+                                  <option value="3"><span class="payment_info">Palawan Pawnshop</span></option>
+                                  <option value="4"><span class="payment_info">Visa</span></option>
+                                  <option value="5"><span class="payment_info">7-Eleven</span></option>
+                                </select>
+                              </div>
+                        </div>
+
                         <div class = "confirm_card_button">
-                            <a id="create_random"><button type="submit" onclick="handleButtonClick()">Confirm</button></a>
+                            <a id="create_random"><button class = "confirm_button" type="submit" onclick="handleButtonClick()" disabled>Confirm</button></a>
                         </div>
                     </div>
 

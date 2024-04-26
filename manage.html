@@ -45,18 +45,19 @@
                 </div>
                 <div class="manage_form_wrapper">
                     <h3>Manage Your Booking!</h3>
-                    <p>Just  fill in your details to view, change or cancel booking.</p>
-                    <form class = "manage_form" action="preview.html">
+                    <p>Just fill in your details to view, change, or cancel booking.</p>
+                    <form class="manage_form" id="manage_form">
                         <label for="booking_email">Email Address<br></label>
                         <input type="email" name="booking email" id="booking_email" required>
                         <p>Please enter the same email address you used when you booked your car</p>
-
-                        <label for="booking_email">Booking ID<br></label>
-                        <input type="number" name="booking email" class="digit_input" id="booking_id" required>
-                        <p>You can find your booking number in your confirmation email – it’ll be at least 9 digits long</p>
-
-                        <input type="submit">
+                
+                        <label for="booking_id">Booking ID<br></label>
+                        <input type="number" name="booking_id" class="digit_input" id="booking_id" required>
+                        <p>You can find your booking number in your confirmation email – it’ll be at least 6 digits long</p>
+                
+                        <input type="submit" value="Submit">
                     </form>
+                    <div id="error_message" style="color: red;"></div>
                 </div>
             </div>
 
