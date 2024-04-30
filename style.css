@@ -150,8 +150,9 @@ section{
 
 button{
   padding: 1ch;
-  width: 200px;
   min-width: 100px;
+  width: 200px;
+  
 }
 
 .home{
@@ -270,7 +271,7 @@ button{
 }
 
 @media only screen and (max-width:600px) {
- 
+   
   .home{
     height: fit-content ;
     padding-bottom: 10px;

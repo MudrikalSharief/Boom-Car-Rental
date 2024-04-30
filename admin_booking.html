@@ -26,10 +26,11 @@
                     </div>
                 </nav>
                 
-                <div class = "dashboard_content">
+                <div class = "booking_content">
                     <div class="booking_content_booking">
-                        <h3>Recent Booking</h3>
+                        
                         <div class="dashboard_booking_wrapper">
+                            <h3>Recent Booking</h3>
                             <table>
                                 <thead>
                                     <tr>
@@ -41,48 +42,21 @@
                                         <th>Rent Days</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class = "table_lastname">Mudrikal</td>
-                                        <td class = "table_firstname">Sharief Kundo</td>
-                                        <td class = "table_email">Shariefkundo@gmail.com</td>
-                                        <td class = "table_carnmae">Toyota Fortune</td>
-                                        <td class = "table_pickupdate">4-24-24</td>
-                                        <td class = "table_rentdays">5</td>
-                                    </tr>
-                                    <tr>
-                                        <td class = "table_lastname">parker</td>
-                                        <td class = "table_firstname">Peter</td>
-                                        <td class = "table_email">peterparker@gmail.com</td>
-                                        <td class = "table_carnmae">mitsubishi mirage g4</td>
-                                        <td class = "table_pickupdate">4-21-24</td>
-                                        <td class = "table_rentdays">5</td>
-                                    </tr>
-                                    <tr>
-                                        <td class = "table_lastname">Mudrikal</td>
-                                        <td class = "table_firstname">Sharief Kundo</td>
-                                        <td class = "table_email">Shariefkundo@gmail.com</td>
-                                        <td class = "table_carnmae">Toyota Fortune</td>
-                                        <td class = "table_pickupdate">4-24-24</td>
-                                        <td class = "table_rentdays">5</td>
-                                    </tr>
-                                    <tr>
-                                        <td class = "table_lastname">parker</td>
-                                        <td class = "table_firstname">Peter</td>
-                                        <td class = "table_email">peterparker@gmail.com</td>
-                                        <td class = "table_carnmae">mitsubishi mirage g4</td>
-                                        <td class = "table_pickupdate">4-21-24</td>
-                                        <td class = "table_rentdays">5</td>
-                                    </tr>
+                                <tbody id="table-body">
                                 </tbody>
                             </table>
+                        </div>        
+                        <div id="pagination-buttons">
+                            <button id="prev-btn" class ="page"><</button>
+                            <button id="next-btn" class ="page">></button>
+                            <span id="current-page"></span>
+                            <button class = "dashboard_viewmore">Edit</button>
                         </div>
-
-                        <button class = "dashboard_viewmore">View More</button>
                     </div>
-
                 </div>
             </div>
+
+            
         </div>
     </section>
 
