@@ -294,7 +294,6 @@ table{
 
 .about_popup form input, select{
     padding: 1ch;
-    margin-bottom: 10px;
     border: 1px solid #000;
 }
 
@@ -657,6 +656,7 @@ table{
 
 .car_add_popup input, select{
     padding: 1ch;
+    margin-bottom: 5px;
  }
  
  .car_add_popup label{
@@ -679,5 +679,17 @@ table{
     display: flex;
     flex-direction: column;
     width: 50%;
+    padding: 20px;
+}
+.car_popup_right input[type = 'file']{
+    border-bottom: 1px solid #000;
+}
+
+/*=============messages=========*/
+
+.message{
+    height: 100%;
+    width: 100%;
+    background-color:#8d1818 ;
     padding: 20px;
 }
