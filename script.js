@@ -329,7 +329,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         else {
             // If neither condition is met, display an error message
-            var errorMessage = "Entered email or booking ID is incorrect.";
+            var errorMessage = "Booking Not Found";
             document.getElementById("error_message").innerText = errorMessage;
 
             // Clear the error message after 3 seconds
