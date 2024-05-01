@@ -264,3 +264,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var popup = document.querySelector('.dashboard_popup');
+    var popup_but = document.getElementById('dashboard_mini_img');
+    
+    popup.style.display = 'none';
+
+    popup_but.addEventListener('click',function(){
+        popup.style.display = 'flex';
+    });
+    popup.addEventListener('click',function(){
+        popup.style.display = 'none';
+    });
+});

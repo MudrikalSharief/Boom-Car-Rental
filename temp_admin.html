@@ -29,26 +29,51 @@
     <section class="admin">
         <div class="admin_wrapper">
             <div id="dashboard" class="dashboard_content">
+                <div class="dashboard_popup">
+                    <div class="dashboard_popup_content">
+                        <h4>Notification</h4>
+                        <div class="dashboard_popup_card">
+                            <h5>New Booking</h5>
+                            <h5>5</h5>
+                        </div>
+                        <div class="dashboard_popup_card">
+                            <h5>New Messages</h5>
+                            <h5>10</h5>
+                        </div>
+                        <div class="dashboard_popup_card">
+                            <h5>New Returning</h5>
+                            <h5>8</h5>
+                        </div>
+                    </div>
+                </div>
                 <div class="dashboard_wrap">
                     <div class="dashboard_mini_box">
                         <div class="dashboard_mini">
                             <h3>Booking Today</h53>
-                            <h1>5</h1>
+                            <h3>5</h3>
                         </div>
     
                         <div class="dashboard_mini">
                             <h3>Return Today</h53>
-                            <h1>5</h1>
+                            <h3>5</h3>
                         </div>
     
                         <div class="dashboard_mini">
                             <h3>Cancelled Today</h53>
-                            <h1>5</h1>
+                            <h3>5</h3>
                         </div>
+                        <div class="dashboard_mini_img" id="dashboard_mini_img">
+                            <img src="pics/notif_icon.png" alt="">
+                            <p>10</p>   
+                        </div>
+                    </div>
+
+                    <div class="dashboard_search">
+                        <input type="search" placeholder="Search for Booking">
+
+                    </div>
     
-                     </div>
-    
-                     <div class="dashboard_recent">
+                    <div class="dashboard_recent">
                         <h3>Recent Booking</h3>
                         <table>
                             <thead>
@@ -163,7 +188,7 @@
                                
                             </tbody>
                         </table>
-                     </div>   
+                    </div>   
                 </div>
             </div>
             
@@ -983,13 +1008,114 @@
                         <button class="car_button_delete red">Delete</button>
 
                     </div>
+                    
                 </div>
-        </div>
-    </div>
+               
+        
+            </div>
             
-    <div id="message" class="message">
-        <h3>Messages</h3>
-    </div>
+            <div id="message" class="dashboard_content">
+                <h3>Messages</h3>
+                <div class="message_wrapper">
+                    <div class="message_people">
+                        <input type="search" placeholder="Search">
+                        
+                        <div class="message_card">
+                            <p class="message_stat">Just Now!</p>
+                            <div class="message_content">
+                                <div class="message_img_holder">
+                                    <img src="pics/huesca.jfif" alt="">
+                                </div>
+                                <div class="message_holder">
+                                    <h4>Huesca</h4>
+                                    <p class="message_preview">Very good experience!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="message_card">
+                            <p class="message_stat">Just Now!</p>
+                            <div class="message_content">
+                                <div class="message_img_holder">
+                                    <img src="pics/alsteven.jfif" alt="">
+                                </div>
+                                <div class="message_holder">
+                                    <h4>Al-steven</h4>
+                                    <p class="message_preview">Nice Car,I love it muwah<3</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="message_card">
+                            <p class="message_stat">Just Now!</p>
+                            <div class="message_content">
+                                <div class="message_img_holder">
+                                    <img src="pics/azuef.jfif" alt="">
+                                </div>
+                                <div class="message_holder">
+                                    <h4>Azief</h4>
+                                    <p class="message_preview">How to reserve car?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="message_card">
+                            <p class="message_stat">Just Now!</p>
+                            <div class="message_content">
+                                <div class="message_img_holder">
+                                    <img src="pics/ian.jfif" alt="">
+                                </div>
+                                <div class="message_holder">
+                                    <h4>Ian</h4>
+                                    <p class="message_preview">What happen if i dont retu..</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message_message">
+                        <div class="message_top">
+                            <h3>Huesca</h3>
+                        </div>
+
+                        <div class="message_bottom">
+                            
+                            <div class="message_convo">
+                                <p class="nameing">Huesca</p>
+                                <div class="message_image_aranger">
+                                    <div class="message_img_holder2">
+                                        <img src="pics/huesca.jfif" alt="">
+                                    </div>
+                                </div>
+                                <div class="message_literal">
+                                    <p>Very good experience!!</p>
+                                   
+                                </div>
+                            </div>
+
+                            <div class="message_convo2">
+                                
+                                <div class="message_literal2">
+                                    <p>Thankyou for positive feedback. The Boom car retal will always give you the best experience you will have!</p>
+                                   
+                                </div>
+                                <div class="message_image_aranger">
+                                    <div class="message_img_holder3">
+                                        <img src="pics/logo-transparent-png.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="message_type">
+                                <input type="text">
+                                <h5>Send</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>    
+        </div>
     </section>
 
 </body>
