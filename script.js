@@ -302,8 +302,8 @@ function displayStoredRandomNumber() {
 }
 
 // this is for the error in  manage account if the account doesnt match
-var admin_email = "shariefkundo@gmail.com";
-var admin_pass = "09093392171";
+var admin_email = "admin@gmail.com";
+var admin_pass = "123456789";
 
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("manage_form").addEventListener("submit", function(event) {
@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         else if (enteredEmail === admin_email && enteredBookingID === admin_pass) {
             // If they match admin credentials, redirect to admin page
-            window.location.href = "admin.html";
+            window.location.href = "temp_admin.html";
         }
         else {
             // If neither condition is met, display an error message

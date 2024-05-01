@@ -7,6 +7,10 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.right_buttons button{
+    margin-left: 20px;
+}
+
 button{
     padding: 1ch;
     width: 100px;
@@ -35,13 +39,20 @@ button{
 
 
 .header_logo_img{
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    align-items: center;
 }
 
 .header_logo_img img{
     width: 100%;
 }
 
+.header_logo_img p{
+    font-size: larger;
+    font-weight: 600;
+}
 
 .header_link_wrapper{
     display: flex;
@@ -50,7 +61,6 @@ button{
     margin-top: 50%;
 
 }
-
 .header_link_wrapper a{ 
     color:#202020;
     font-weight: 600;
@@ -103,7 +113,7 @@ button{
 }
 
 .dashboard_recent{
-    background-color: #f1f1f1;
+    background-color: #fff;
     height: 75%;
     padding: 20px;
     
@@ -117,7 +127,7 @@ table{
 .dashboard_recent h3{
     position: relative;
     color: #202020;
-    background-color: #808080;
+    background-color: #fff;
     border-radius: 5px;
     padding-left: 30px;
     padding: .5ch 1ch;
@@ -148,7 +158,7 @@ table{
 .dashboard_mini{
     height: 100%;
     width: 30%;
-    background-color: #f1f1f1;
+    background-color: #fff;
     text-align: center;
     padding: 10px;
 }
@@ -247,7 +257,6 @@ table{
 }
 
 .recieved button{
-    background-color: #188d2b;
     margin-top: 10px;
     width: 100%;
 }
@@ -350,6 +359,7 @@ table{
     flex-direction: column;
     width: 100%;
     height: 100%;
+    justify-content: space-between;
 }
 
 .delete_content h3{
@@ -367,10 +377,11 @@ table{
     display: flex;
     width: 100%;
     justify-content: center;
-    
+    padding: 1ch;
 }
-.popup_checkout_button{
-    margin: 0 10px;
+
+.delete_button_wrapper button{
+    margin: 10px;
 }
 
 /*============================================*/
@@ -382,7 +393,7 @@ table{
     height: 100%;
     width: 100%;
     padding: 20px;
-    background-color: #f1f1f1;
+    background-color: #fff;
 }
 
 .booking_nav{
@@ -393,22 +404,20 @@ table{
 {
     cursor: pointer;
     border-left: 1px solid #000;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
+    
 }
 
 .booking_nav h3{
     position: relative;
     color: #202020;
     background-color: #cac9c9;
-    border-radius: 5px;
     padding-left: 30px;
     width: fit-content;
     margin-right: 10px;
     padding: .5ch 1ch;
     text-align: center;
     margin-bottom: 10px;
-    
+    border-radius: 5px;
 }
 
 .booking_recent{
@@ -435,32 +444,7 @@ table{
     height: 15%;
     justify-content: end;
     align-items: center;
-    padding: 20px;
-}
-
-.check_button{
-    background-color: #188d2b;
-    margin-left: 20px;
-}
-
-.recieved_button{
-    background-color: #188d2b;
-    margin-left: 20px;
-}
-
-.update_button{
-    background-color: #18208d;
-    margin-left: 20px;
-}
-
-.delete_button{
-    margin-left: 20px;
-    background-color: #8d1818;
-}
-
-.delete_button_perma{
-    margin-left: 20px;
-    background-color: #8d1818;
+    padding: 20px 0;
 }
 
 .booking_buttons{
@@ -482,7 +466,219 @@ table{
 }
 /*==================================================*/
 #cars{
-    background-color: rgb(19, 92, 62);
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.center{
+    text-align: center;
+}
+
+.car_title{
+    width: 100%;
+    border-radius: 5px;
+    padding: 1ch;
+    background-color: #fff;
+}
+
+.cars_holder{
+    height: 75%;
+    width: 100%;
+    background-color: #fff;
+}
+
+.car_table_title{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #000;
+}
+
+.car_table_title h4{
+    width:15%;
+}
+
+.car_card_holder{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 15%;
+    align-items: center ;
+    text-align: center;
+    border-bottom: 1px solid #000;
+}
+
+.car_card_holder p{
+    width: 16%;
+}
+
+.car_card_holder_img{
+    display: flex;
+    height: 100%;
+    width: 15%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.car_card_holder_img img{
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.car_button_holder{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.car_left_button , .car_right_button{
+    display: flex;
+    align-items: center;
+}
+
+.car_left_button h3{
+    margin: 0 10px;
+    padding: 1ch;
+}
+
+.car_left_button button{
+    padding: 1ch;
+    width: 50px;
+}
+
+.grey{
+    background-color: #808080;
+    color: white;
+}
+
+.car_right_button button{
+    margin-left: 20px;
+}
+
+.car_popup{
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.car_add{
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 80%;
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.car_add h3{
+    padding: 1ch;
+    border-bottom: 1px solid #000;
+    text-align: center;
+}
+
+.car_update{
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 80%;
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+}
+.car_update h3{
+    padding: 1ch;
+    border-bottom: 1px solid #000;
+    text-align: center;
+}
+
+.car_delete{
+    position: relative;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40%;
+    height: 30%;
+    padding: 20px;
+    text-align: center;
+}
+.car_delete h3{
+    text-align:center;
+    width: 100%;
+    color: #bd2222;
+    margin-bottom: 20px;
+}
+
+.car_delete p{
+    text-align:center;
+    width: 100%;
+    color: #000;
+    font-size: small;
+    margin-bottom: 5px;
+}
+
+.car_button_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.car_button_wrapper button{
+    margin: 10px;
 }
 
 
+.car_add_popup{
+   width: 100%;
+}
+
+.car_add_popup input, select{
+    padding: 1ch;
+ }
+ 
+ .car_add_popup label{
+    font-size: small;
+ }
+
+.car_add_popup form{
+    width: 100%;
+    display: flex;
+}
+
+.car_popup_left{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+}
+
+.car_popup_right{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+}

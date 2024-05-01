@@ -13,7 +13,8 @@
     <header class="header">
         <div class="header_wrapper">
             <div class="header_logo_img">
-                <img src="pics/logo-transparent-png.png" alt="logo">
+                <a href="index.html"><img src="pics/logo-transparent-png.png" alt="logo"></a>
+                <p>Boom Car Rental</p>
             </div>
 
             <div class="header_link_wrapper">
@@ -168,6 +169,60 @@
             <div id="booking" class="dashboard_content">
                 <div class="popup" id="popup">
                     
+
+                    <div class="about" id="popup_card_add">
+                        <h3>Add Booking</h3>
+                        <div class="about_popup">
+                            <form action="">
+                                <div class="about_popup_left">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" name="firstName"  id="popup_firstName">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" name="lastName"  id="popup_lasttName">
+                                    <label for="date1">Pick-up Date</label>
+                                    <input type="date" name="date1" id="popup_date1"> 
+                                    <label for="date2">Return Date</label>
+                                    <input type="date" name="date2" id="popup_date2">
+
+                                </div>
+
+                                <div class="about_popup_right">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" id="popup_email">
+                                    <label for="dropdown2">Car</label>
+                                    <select name="dropdown1" id="dropdown1">
+                                        <option value="option0">--Select--</option>
+                                        <option value="option1">Mitsubishi Mirage</option>
+                                        <option value="option2">Suzuki Swift Dzire</option>
+                                        <option value="option3">Honda Civic</option>
+                                        <option value="option4">Toyota Vios</option>
+                                        <option value="option5">Toyota Rush</option>
+                                        <option value="option6">Toyota Fortunenr</option>
+                                    </select>
+                                    <label for="dropdown2">Payment Method</label>
+                                    <select name="dropdown2" id="dropdown2">
+                                        <option value="option0">--Select--</option>
+                                        <option value="option1">Gcash</option>
+                                        <option value="option2">Paypal</option>
+                                        <option value="option3">Palawan Pay</option>
+                                        <option value="option1">Visa</option>
+                                        <option value="option2">7 Eleven</option>
+                                    </select>
+                                    <label for="price">Price / Day</label>
+                                    <input type="number" placeholder="0" disabled>
+                                    </div>
+                                </form>
+                        </div>
+                        
+                        <div class="about_button_wrapper">
+                            <button class="popup_checkout_button green">Add</button>
+                            <button class="popup_checkout_button red">Cancel</button>
+                        </div>
+
+                    </div>
+
+
+
                     <div class="checkout" id="popup_card_check">
                         <div class="checkout_form" id="checkout_form">
                             <h3>Checkout Form</h3>
@@ -183,7 +238,7 @@
                                 <p><strong>Payment Status: </strong><span>Paid</span> </p>
                             </div>
                             
-                            <button class="popup_checkout_button">Checkout!</button>
+                            <button class="popup_checkout_button green">Checkout!</button>
                         </div>
                     </div>
 
@@ -202,7 +257,30 @@
                                 <p><strong>Payment Status: </strong><span>Paid</span> </p>
                             </div>
                             
-                            <button class="popup_checkout_button">Checkout!</button>
+                            <button class="popup_checkout_button green">Recieved!</button>
+                        </div>
+                    </div>
+
+
+                    <div class="recieved" id="popup_card_table">
+                        <div class="recieved_form" id="checkout_form">
+                            <h3>Booking Information</h3>
+                            <div class="popup_ps">
+                                <p><strong>First Name: </strong> Sharief </p>
+                                <p><strong>Last Name: </strong> Mudrikal </p>
+                                <p><strong>Email: </strong> shariefkundo@gmail.com </p>
+                                <p><strong>Car: </strong> Midthsubishi</p>
+                                <p><strong>Pick Up Date: </strong> 2024-05-05 </p>
+                                <p><strong>Pick Up Date: </strong> 2024-05-05 </p>
+                                <p><strong>Rent Days: </strong> 5 </p>
+                                <p><strong>Payment Status: </strong> Palawan </p>
+                                <p><strong>Payment Status: </strong><span>Paid</span> </p>
+                            </div>
+                            
+                            <div>
+                                <button class="update_button blue">Update</button>
+                                <button class="popup_checkout_button green">Back</button>
+                            </div>
                         </div>
                     </div>
 
@@ -221,6 +299,7 @@
                                     <input type="date" name="date2" id="popup_date2">
 
                                 </div>
+
                                 <div class="about_popup_right">
                                     <label for="email">Email</label>
                                     <input type="email" placeholder="shariefkundo@gmail.com" name="email" id="popup_email">
@@ -243,8 +322,8 @@
                                     </select>
                                     <label for="price">Price / Day</label>
                                     <input type="number" placeholder="2000" disabled>
-                                </div>
-                            </form>
+                                    </div>
+                                </form>
                         </div>
                         
                         <div class="about_button_wrapper">
@@ -252,20 +331,22 @@
                             <button class="popup_checkout_button red">Cancel</button>
                         </div>
 
-                    </div>
+                </div>
 
+                       
                     <div class="delete" id="popup_card_delete">
                         <div class="delete_content">
-                            <h3>Are you sure to Cancel this Booking?</h3>
-                            <p>This booking will go to cancel booking</p>
-                        </div>
-                    
-                        <div class="delete_button_wrapper">
-                            <button class="popup_checkout_button red">Yes</button>
-                            <button class="popup_checkout_button green">No</button>
-                        
-                        </div>
+                        <h3>Are you sure to Cancel this Booking?</h3>
+                        <p>This booking will go to cancel booking</p>
                     </div>
+                        
+                    <div class="delete_button_wrapper">
+                        <button class="popup_checkout_button red">Yes</button>
+                        <button class="popup_checkout_button green">No</button>
+                            
+                    </div>
+                    </div>
+
 
                     <div class="delete" id="popup_card_delete_perma">
                         <div class="delete_content">
@@ -289,7 +370,7 @@
                         <h3 class="butons3">Cancelled Bookings</h3>
                     </div>
                     <div id="rental" class="booking_recent">
-                        <table>
+                        <table class="your_tables">
                             <thead>
                                 <tr>
                                     <th>Last Name</th>
@@ -424,15 +505,16 @@
                             </div>
 
                             <div class="right_buttons">
-                                <button class="check_button">Checkout</button>
-                                <button class="update_button">Update</button>
-                                <button class="delete_button">Cancel</button>
+                                <button class="add_button green">Add</button>
+                                <button class="check_button green">Checkout</button>
+                                <button class="update_button blue">Update</button>
+                                <button class="delete_button red">Cancel</button>
                             </div>
                         </div>
                     </div>
 
                     <div id="return" class="booking_recent">
-                        <table>
+                        <table class="your_tables">
                             <thead>
                                 <tr>
                                     <th>Last Name</th>
@@ -565,16 +647,16 @@
                             </div>
 
                             <div class="right_buttons">
-                                <button class="recieved_button">Recieved</button>
-                                <button class="update_button">Update</button>
-                                <button class="delete_button">Cancel</button>
+                                <button class="recieved_button green">Recieved</button>
+                                <button class="update_button blue">Update</button>
+                                <button class="delete_button red">Cancel</button>
                             </div>
                             
                         </div>
                     </div>
 
                     <div id="cancelled" class="booking_recent">
-                        <table>
+                        <table class="your_tables">
                             <thead>
                                 <tr>
                                     <th>Last Name</th>
@@ -707,7 +789,7 @@
                             </div>
 
                             <div class="right_buttons">
-                                 <button class="delete_button_perma">Delete</button>
+                                 <button class="delete_button_perma red">Delete</button>
                             </div>
                             
                         </div>
@@ -717,6 +799,190 @@
             </div>
             
             <div id="cars" class="dashboard_content">
+
+                <div class="car_popup" id="car_popup">
+
+                    <div class="car_add" id="car_add">
+                        <h3>Add New Car</h3>
+                        <div class="car_add_popup">
+                            <form action="">
+                                <div class="car_popup_left">
+                                    <label for="firstName">Car Name</label>
+                                    <input type="text" name="firstName" id="popup_firstName">
+                                    <label for="car_transmission">Seat Capacity</label>
+                                    <input type="number" name="car_transmission">
+                                    <label for="car_transmission">luggage Capacity</label>
+                                    <input type="number" name="car_transmission">
+                                </div>
+
+                                <div class="car_popup_right">
+                                    <label for="car_dropdown1">Transmission Type</label>
+                                    <select name="car_dropdown1" id="car_dropdown1">
+                                        <option value="option0">--Select--</option>
+                                        <option value="option1">Manual</option>
+                                        <option value="option2">Automatic</option>
+                                        <option value="option3">Automatic / Manual</option>
+                                     </select>
+                                     <label for="Price">Car Price</label>
+                                     <input type="text" name="Price" id="popup_firstName">
+                                     
+                                    <label for="car_img">Image</label>
+                                    <input type="file" name="car_img">
+                                     </div>
+                                </form>
+
+                        </div>
+                        
+                        <div class="about_button_wrapper">
+                            <button class="car_popup_checkout_button green">Add</button>
+                            <button class="car_popup_checkout_button red">Cancel</button>
+                        </div>
+                    </div>
+                    
+
+                    <div class="car_update" id="car_update">
+                        <h3>Update Car</h3>
+                        <div class="car_add_popup">
+                            <form action="">
+                                <div class="car_popup_left">
+                                    <label for="firstName">Car Name</label>
+                                    <input type="text" name="firstName" id="popup_firstName">
+                                    <label for="car_transmission">Seat Capacity</label>
+                                    <input type="number" name="car_transmission">
+                                    <label for="car_transmission">luggage Capacity</label>
+                                    <input type="number" name="car_transmission">
+                                </div>
+
+                                <div class="car_popup_right">
+                                    <label for="car_dropdown1">Transmission Type</label>
+                                    <select name="car_dropdown1" id="car_dropdown1">
+                                        <option value="option0">--Select--</option>
+                                        <option value="option1">Manual</option>
+                                        <option value="option2">Automatic</option>
+                                        <option value="option3">Automatic / Manual</option>
+                                     </select>
+                                     <label for="Price">Car Price</label>
+                                     <input type="text" name="Price" id="popup_firstName">
+                                     
+                                    <label for="car_img">Image</label>
+                                    <input type="file" name="car_img">
+                                     </div>
+                                </form>
+
+                        </div>
+                        
+                        <div class="about_button_wrapper">
+                            <button class="car_popup_checkout_button blue">Update</button>
+                            <button class="car_popup_checkout_button red">Cancel</button>
+                        </div>
+                    </div>
+
+                    <div class="car_delete" id="car_delete">
+                        <h3>Are you sure to delete this car?</h3>
+                        <p>This car will be deleted</p>
+                        <div class="car_button_wrapper">
+                            <button class="car_popup_checkout_button red">Yes</button>
+                            <button class="car_popup_checkout_button green">No</button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <h3 class="car_title">Cars</h3>
+                <div class="cars_holder">
+                    <div class="car_table_title">
+                        <h4></h4>
+                        <h4>Car Name</h4>
+                        <h4>Tansmision</h4>
+                        <h4>Luggage</h4>
+                        <h4>Passenger</h4>
+                        <h4>Price / Day</h4>
+                    </div>
+
+                    <div class="car_card_holder">
+                        <div class="car_card_holder_img">
+                            <img src="pics/mitsubishi mirage g4.png" alt="">
+                        </div>
+                        <p>Mitsubishi Mirage G4</p>
+                        <p>Auto / Manual</p>
+                        <p>5</p>
+                        <p>4</p>
+                        <p>2300</p>
+                    
+                    </div>
+                    
+                    <div class="car_card_holder">
+                        <div class="car_card_holder_img">
+                            <img src="pics/suzuki swift dzire.png" alt="">
+                        </div>
+                        <p>Suzuki Swift Dzire</p>
+                        <p class="center">Auto / Manual</p>
+                        <p class="center">4</p>
+                        <p class="center" >4</p>
+                        <p class="center">2300</p>
+                    
+                    </div>
+                    <div class="car_card_holder">
+                        <div class="car_card_holder_img">
+                            <img src="pics/honda civic 2021.png" alt="">
+                        </div>
+                        <p>Honda Civiv</p>
+                        <p>Auto / Manual</p>
+                        <p>2</p>
+                        <p>4</p>
+                        <p>3000</p>
+                    
+                    </div>
+                    <div class="car_card_holder">
+                        <div class="car_card_holder_img">
+                            <img src="pics/toyota vios color.png" alt="">
+                        </div>
+                        <p>Toyota Vios</p>
+                        <p>Auto / Manual</p>
+                        <p>2</p>
+                        <p>4</p>
+                        <p>2000</p>
+                    
+                    </div>
+                    <div class="car_card_holder">
+                        <div class="car_card_holder_img">
+                            <img src="pics/toyota rush.png" alt="">
+                        </div>
+                        <p>Toyota Rush</p>
+                        <p>Auto / Manual</p>
+                        <p>5</p>
+                        <p>6</p>
+                        <p>3000</p>
+                    
+                    </div>
+                    <div class="car_card_holder">
+                        <div class="car_card_holder_img">
+                            <img src="pics/toyota fortunenr.png" alt="">
+                        </div>
+                        <p>Toyota Fortunenr</p>
+                        <p>Auto / Manual</p>
+                        <p>6</p>
+                        <p>5</p>
+                        <p>3000</p>
+                    </div>
+                </div>
+
+                <div class="car_button_holder">
+                    <div class="car_left_button">
+                        <button class="grey"><</button>
+                        <h3>1</h3>
+                        <button class="grey">></button>
+                    </div>
+
+                    <div class="car_right_button">
+                        <button class="car_button_add green">Add</button>
+                        <button class="car_button_update blue">Update</button>
+                        <button class="car_button_delete red">Delete</button>
+
+                    </div>
+                </div>
 
             </div>
         </div>
