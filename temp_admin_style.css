@@ -526,10 +526,9 @@ table{
 }
 
 .car_card_holder_img img{
-    width: 80%;
-    height: 100%;
+    height: 90%;
     object-fit: cover;
-}
+}/*=========================================*/
 
 .car_button_holder{
     display: flex;
